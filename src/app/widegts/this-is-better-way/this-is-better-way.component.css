@@ -1,0 +1,259 @@
+/* ========================================
+   There Is A Better Way Section
+   ======================================== */
+
+.better-section {
+  width: 100%;
+  background-color: var(--pure-white);
+  padding: 88px 0;
+}
+
+.better-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  align-items: flex-start;
+  gap: 72px;
+}
+
+/* ========================================
+   Left Column — Image
+   ======================================== */
+
+.better-left {
+  flex: 0 0 360px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.better-image-wrapper {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  position: relative;
+  transition: box-shadow 0.35s ease, transform 0.35s ease;
+}
+
+.better-image-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.18);
+}
+
+.better-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.better-image-wrapper:hover .better-image {
+  transform: scale(1.02);
+}
+
+/* ========================================
+   Right Column — Content
+   ======================================== */
+
+.better-right {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+  padding-top: 4px;
+}
+
+/* ========================================
+   Heading
+   ======================================== */
+
+.better-heading {
+  font-family: var(--newsreader-font-family);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--primary-dark);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* ========================================
+   Body Text
+   ======================================== */
+
+.better-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.better-text {
+  font-family: var(--inria-serif-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-grey);
+  line-height: 1.75;
+  margin: 0;
+}
+
+/* ========================================
+   CTA Buttons
+   ======================================== */
+
+.better-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  background-color: transparent;
+  color: var(--primary-dark);
+  font-family: var(--font-primary);
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid var(--primary-dark);
+  border-radius: 10px;
+  letter-spacing: 0.2px;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  cursor: pointer;
+}
+
+.btn-outline:hover {
+  background-color: var(--primary-dark);
+  color: var(--pure-white);
+  transform: translateY(-1px);
+}
+
+.btn-filled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  background-color: var(--accent-red);
+  color: var(--pure-white);
+  font-family: var(--font-primary);
+  font-size: 13.5px;
+  font-weight: 500;
+  text-decoration: none;
+  border: 1.5px solid var(--accent-red);
+  border-radius: 10px;
+  letter-spacing: 0.2px;
+  transition: background-color 0.2s ease, border-color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-filled:hover {
+  background-color: var(--accent-red-dark);
+  border-color: var(--accent-red-dark);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(198, 40, 40, 0.35);
+}
+
+/* ========================================
+   Testimonial / Quote Block
+   ======================================== */
+
+.better-quote {
+  margin: 0;
+  padding: 28px 32px;
+  border: 1.5px solid #E5E7EB;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  position: relative;
+}
+
+.better-quote-text {
+  font-family: var(--inria-serif-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-grey);
+  line-height: 1.8;
+  margin: 0;
+  font-style: normal;
+}
+
+.better-quote-author {
+  font-family: var(--font-primary);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--primary-dark);
+  letter-spacing: 0.4px;
+  margin: 0;
+}
+
+/* ========================================
+   Responsive — 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .better-section {
+    padding: 52px 0;
+  }
+
+  .better-container {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 32px;
+    align-items: stretch;
+  }
+
+  .better-left {
+    flex: unset;
+    width: 100%;
+  }
+
+  .better-image-wrapper {
+    border-radius: 6px;
+  }
+
+  .better-right {
+    gap: 22px;
+    padding-top: 0;
+  }
+
+  .better-heading {
+    font-size: 28px;
+  }
+
+  .better-text {
+    font-size: 14px;
+  }
+
+  .better-actions {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .btn-outline,
+  .btn-filled {
+    width: 100%;
+    justify-content: center;
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+
+  .better-quote {
+    padding: 22px 20px;
+  }
+
+  .better-quote-text {
+    font-size: 13.5px;
+  }
+
+  .better-quote-author {
+    font-size: 12px;
+  }
+}

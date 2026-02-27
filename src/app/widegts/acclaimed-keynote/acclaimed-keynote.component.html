@@ -1,0 +1,67 @@
+<section class="keynote-section">
+  <div class="keynote-container">
+
+    <!-- Heading -->
+    <h2 class="keynote-heading">Acclaimed Keynote</h2>
+
+    <!-- Main Content: Left Info + Right Video -->
+    <div class="keynote-content">
+
+      <!-- Left Column -->
+      <div class="keynote-left">
+
+        <div class="keynote-block">
+          <h3 class="keynote-label">Title Of Program</h3>
+          <p class="keynote-text">
+            Be The Best Part of Their Day: Supercharging Communication with Values-Driven Leadership
+          </p>
+        </div>
+
+        <div class="keynote-block">
+          <h3 class="keynote-label">Ideal audience</h3>
+          <p class="keynote-text">C-Suite Executives that lead organizations and people</p>
+        </div>
+
+        <div class="keynote-block">
+          <h3 class="keynote-label">Outcomes</h3>
+          <ul class="keynote-outcomes">
+            <li *ngFor="let outcome of outcomes" class="keynote-outcome-item">
+              <span class="outcome-bullet">·</span>
+              <span>{{ outcome }}</span>
+            </li>
+          </ul>
+        </div>
+
+        <p class="keynote-customized">All programs are customized to fit each audience.</p>
+
+        <button class="btn-download">Download One Sheet</button>
+
+      </div>
+
+      <!-- Right Column: YouTube Video -->
+      <div class="keynote-video-wrapper">
+        <iframe
+          width="560"
+          height="315"
+          src="https://www.youtube.com/embed/JA--f4cORiE?si=903pua3M84cjQQbx"
+          title="YouTube video player"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen
+          class="keynote-iframe"
+        ></iframe>
+      </div>
+
+    </div>
+
+    <!-- Testimonial -->
+    <div class="keynote-testimonial">
+      <p class="testimonial-quote">
+        "David was so easy to work with, and our members truly enjoyed his session. He understands what they are going through as a CEO of a rural hospital."
+      </p>
+      <p class="testimonial-author">Valerie Siebert-Thomas, Colorado Hospital Association</p>
+    </div>
+
+  </div>
+</section>

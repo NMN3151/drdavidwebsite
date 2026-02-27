@@ -1,0 +1,27 @@
+<section class="meeting-section">
+  <div class="meeting-container">
+
+    <!-- Left: Heading + Links -->
+    <div class="meeting-left">
+      <h2 class="meeting-heading">For Meeting Professionals</h2>
+
+      <ul class="meeting-links">
+        <li *ngFor="let item of downloadLinks">
+          <a [href]="item.href" class="meeting-link" target="_blank" rel="noopener noreferrer">
+            {{ item.label }}
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="meeting-image-wrapper">
+      <img
+        src="../../../assets/images/formeetingprofessinals.png"
+        alt="Dr. Schreiner meeting with professionals"
+        class="meeting-image"
+      />
+    </div>
+
+  </div>
+</section>

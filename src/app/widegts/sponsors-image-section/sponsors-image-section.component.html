@@ -1,0 +1,21 @@
+<section class="sponsors">
+  <div class="sponsors-container">
+
+    <!-- Row 1: 6 logos -->
+    <div class="sponsors-row">
+      <a href="#" class="sponsor-item" *ngFor="let sponsor of sponsorsRow1">
+        <img [src]="sponsor.src" [alt]="sponsor.alt" class="sponsor-logo" />
+      </a>
+    </div>
+
+    <!-- Divider -->
+
+    <!-- Row 2: 5 logos -->
+    <div class="sponsors-row">
+      <a href="#" class="sponsor-item" *ngFor="let sponsor of sponsorsRow2">
+        <img [src]="sponsor.src" [alt]="sponsor.alt" class="sponsor-logo" />
+      </a>
+    </div>
+
+  </div>
+</section>

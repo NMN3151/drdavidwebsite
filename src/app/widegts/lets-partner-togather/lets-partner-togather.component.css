@@ -1,0 +1,150 @@
+/* ========================================
+   Partner Section
+   ======================================== */
+
+.partner-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 50px 0px;
+}
+
+.partner-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 56px;
+}
+
+/* ========================================
+   Heading
+   ======================================== */
+
+.partner-heading {
+  font-family: var(--newsreader-font-family);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--primary-dark);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* ========================================
+   Cards Grid
+   ======================================== */
+
+.partner-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 32px;
+  width: 100%;
+}
+
+/* ========================================
+   Individual Card
+   ======================================== */
+
+.partner-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+}
+
+/* ========================================
+   Icon Circle
+   ======================================== */
+
+.partner-icon-wrapper {
+  width: 110px;
+  height: 110px;
+  border-radius: 50%;
+  background-color: #f0f0f0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  overflow: hidden;
+}
+
+.partner-icon-img {
+  width: 65px;
+  height: 65px;
+  object-fit: contain;
+}
+
+/* ========================================
+   Card Text
+   ======================================== */
+
+.partner-card-title {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 15.5px;
+  font-weight: 700;
+  color: #1a1a1a;
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+.partner-card-desc {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.7;
+  max-width: 260px;
+}
+
+/* ========================================
+   Responsive - Tablet
+   ======================================== */
+
+@media (max-width: 768px) {
+  .partner-section {
+    padding: 60px 24px 70px;
+  }
+
+  .partner-cards {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .partner-card {
+    align-items: center;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile
+   ======================================== */
+
+@media (max-width: 480px) {
+  .partner-section {
+    padding: 48px 20px 60px;
+  }
+
+  .partner-container {
+    gap: 40px;
+  }
+
+  .partner-icon-wrapper {
+    width: 96px;
+    height: 96px;
+  }
+
+  .partner-icon-img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .partner-card-title {
+    font-size: 15px;
+  }
+
+  .partner-card-desc {
+    font-size: 13.5px;
+  }
+}

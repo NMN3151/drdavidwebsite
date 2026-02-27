@@ -1,0 +1,133 @@
+/* ========================================
+   Meeting Section - Web View
+   ======================================== */
+
+.meeting-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 80px 48px;
+}
+
+.meeting-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 64px;
+}
+
+/* ========================================
+   Left Column
+   ======================================== */
+
+.meeting-left {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+/* ========================================
+   Heading
+   ======================================== */
+
+.meeting-heading {
+   font-family: var(--newsreader-font-family);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--primary-dark);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* ========================================
+   Download Links
+   ======================================== */
+
+.meeting-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.meeting-link {
+  font-size: 14px;
+  font-weight: 400;
+  color: #1e4a8a;
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.2s ease, text-decoration 0.2s ease;
+}
+
+.meeting-link:hover {
+  color: #C62828;
+  text-decoration: underline;
+}
+
+/* ========================================
+   Right: Image
+   ======================================== */
+
+.meeting-image-wrapper {
+  flex: 1;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 420px;
+}
+
+.meeting-image {
+  width: 80%;
+  height: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* ========================================
+   Mobile View - 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .meeting-section {
+    padding: 48px 20px 56px;
+  }
+
+  .meeting-container {
+    flex-direction: column;
+    gap: 36px;
+    align-items: flex-start;
+  }
+
+  .meeting-left {
+    flex: none;
+    width: 100%;
+    gap: 28px;
+  }
+
+  .meeting-heading {
+    font-size: 26px;
+  }
+
+  .meeting-links {
+    gap: 12px;
+  }
+
+  .meeting-link {
+    font-size: 13.5px;
+  }
+
+  .meeting-image-wrapper {
+    width: 100%;
+    max-height: 240px;
+    border-radius: 6px;
+  }
+
+  .meeting-image {
+    max-height: 240px;
+  }
+}

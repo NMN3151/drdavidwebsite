@@ -1,0 +1,25 @@
+/* ==================== APP CONTAINER ==================== */
+
+.app-container {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--soft-canvas);
+}
+
+/* ==================== MAIN CONTENT ==================== */
+
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  min-height: 100vh;
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background-color: var(--soft-canvas);
+  overflow-y: auto;
+  transition: margin-left var(--transition-slow);
+}
+
+/* When sidebar is collapsed */
+.main-content.collapsed {
+  margin-left: 80px;
+}

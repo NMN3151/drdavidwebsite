@@ -1,0 +1,187 @@
+/* ========================================
+   Banner Section - Web View
+   ======================================== */
+
+.banner-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 64px 48px 72px;
+  margin-top:50px;
+}
+
+.banner-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 48px;
+}
+
+/* ========================================
+   Testimonial Card
+   ======================================== */
+
+.banner-card {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  padding: 48px 56px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 28px;
+  text-align: center;
+}
+
+/* ========================================
+   Quote Text
+   ======================================== */
+
+.banner-quote {
+  font-family: var(--inria-serif-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.85;
+  max-width: 960px;
+}
+
+/* ========================================
+   Author Block
+   ======================================== */
+
+.banner-author {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.author-name {
+  font-family: var(--header-font-family);
+  font-size: 18px;
+  font-weight: bold;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.author-sub {
+  font-family: var(--inria-serif-font-family);
+  font-size: 17px;
+  font-weight: regular;
+  color: #1a1a1a;
+  line-height: 1.5;
+  text-align: center;
+  font-style: italic;
+}
+
+ 
+
+/* ========================================
+   CTA Buttons
+   ======================================== */
+
+.banner-actions {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background-color: transparent;
+  color: #1a1a1a;
+  font-family: var(--header-font-family);
+  font-size: 13.5px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+  border: 1.5px solid #9ca3af;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-outline:hover {
+  border-color: #1a1a1a;
+  background-color: #f9fafb;
+}
+
+.btn-solid {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 28px;
+  background-color: #C62828;
+  color: #ffffff;
+  font-family: var(--header-font-family);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-solid:hover {
+  background-color: #A61B1B;
+  transform: translateY(-1px);
+}
+
+.btn-solid:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   Mobile View - 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .banner-section {
+    padding: 40px 20px 52px;
+  }
+
+  .banner-container {
+    gap: 32px;
+  }
+
+  .banner-card {
+    padding: 28px 20px;
+    gap: 20px;
+  }
+
+  .banner-quote {
+    font-size: 13.5px;
+    line-height: 1.75;
+  }
+
+  .author-name {
+    font-size: 12.5px;
+  }
+
+  .author-sub {
+    font-size: 13px;
+  }
+
+  .banner-actions {
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+  }
+
+  .btn-outline,
+  .btn-solid {
+    width: 100%;
+    justify-content: center;
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+}

@@ -1,0 +1,251 @@
+/* ========================================
+   Why Section
+   ======================================== */
+
+.why-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 50px 0px;
+}
+
+.why-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 60px;
+  align-items: center;
+}
+
+/* ========================================
+   Left Column
+   ======================================== */
+
+.why-left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ========================================
+   Heading
+   ======================================== */
+
+.why-heading {
+  font-family: var(--newsreader-font-family);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--primary-dark);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* ========================================
+   Bullet List
+   ======================================== */
+
+.why-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  padding: 0;
+  margin: 0;
+}
+
+.why-list-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.why-bullet {
+  font-size: 18px;
+  color: #1a1a1a;
+  flex-shrink: 0;
+  line-height: 1.6;
+  margin-top: 1px;
+}
+
+.why-list-item p {
+  font-family: var(--inria-serif-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: #2a2a2a;
+  margin: 0;
+}
+
+.why-list-item p strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* ========================================
+   CTA Buttons
+   ======================================== */
+
+.why-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  background-color: transparent;
+  color: #1a1a1a;
+  font-family: var(--inria-serif-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  border: 1.5px solid #1a1a1a;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.btn-outline:hover {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+.btn-filled {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 26px;
+  background-color: #C62828;
+  color: #ffffff;
+  font-family: var(--inria-serif-font-family);
+  font-size: 14px;
+  font-weight: 400;
+  border: 1.5px solid #C62828;
+  border-radius: 10px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.btn-filled:hover {
+  background-color: #A61B1B;
+  border-color: #A61B1B;
+}
+
+/* ========================================
+   Testimonial Box
+   ======================================== */
+
+.why-testimonial {
+  border: 1.5px solid #d0d0d0;
+  border-radius: 6px;
+  padding: 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: #ffffff;
+}
+
+.why-testimonial-text {
+  font-family: var(--inria-serif-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.why-testimonial-source {
+  font-family: var(--inria-serif-font-family);
+  font-size: 18px;;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.why-testimonial-source strong {
+  font-weight: 700;
+}
+
+/* ========================================
+   Right Column - Book Image
+   ======================================== */
+
+.why-right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.why-book-img {
+  height: auto;
+  object-fit: contain;
+  display: block;
+  filter: drop-shadow(0 20px 48px rgba(0, 0, 0, 0.18));
+}
+
+/* ========================================
+   Responsive - Tablet
+   ======================================== */
+
+@media (max-width: 900px) {
+  .why-container {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .why-right {
+    order: -1;
+  }
+
+  .why-book-img {
+    width: 260px;
+  }
+
+  .why-section {
+    padding: 56px 32px 64px;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile
+   ======================================== */
+
+@media (max-width: 480px) {
+  .why-section {
+    padding: 48px 20px 56px;
+  }
+
+  .why-container {
+    gap: 36px;
+  }
+
+  .why-book-img {
+    width: 220px;
+  }
+
+  .why-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .btn-outline,
+  .btn-filled {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .why-testimonial {
+    padding: 18px 20px;
+  }
+
+  .why-list-item p {
+    font-size: 14px;
+  }
+}

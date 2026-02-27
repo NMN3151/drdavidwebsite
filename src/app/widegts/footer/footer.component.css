@@ -1,0 +1,355 @@
+/* ========================================
+   Newsletter Strip
+   ======================================== */
+
+.newsletter-strip {
+  width: 100%;
+  background-color: #f3f3f1;
+  padding: 32px 48px;
+}
+
+.newsletter-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  align-items: flex-end;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.newsletter-text {
+  flex: 0 0 450px;
+  min-width: 220px;
+}
+
+.newsletter-heading {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: #1a1a1a;
+  line-height: 1.3;
+  width: max-content;
+  margin-bottom: 8px;
+}
+
+.newsletter-desc {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ========================================
+   Newsletter Form
+   ======================================== */
+
+.newsletter-form {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.newsletter-input {
+  flex: 1;
+  min-width: 140px;
+  height: 44px;
+  padding: 0 16px;
+  background-color: #ffffff;
+  border: 1px solid #d4d4d0;
+  border-radius: 4px;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 13.5px;
+  color: #333333;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.newsletter-input::placeholder {
+  color: #aaaaaa;
+}
+
+.newsletter-input:focus {
+  border-color: #999999;
+}
+
+.newsletter-btn {
+  height: 44px;
+  padding: 0 28px;
+  background-color: #C62828;
+  color: #ffffff;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 13.5px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.newsletter-btn:hover {
+  background-color: #A61B1B;
+}
+
+/* ========================================
+   Main Footer
+   ======================================== */
+
+.footer {
+  width: 100%;
+  background-color: #f3f3f1;
+  padding: 48px 48px 28px;
+}
+
+.footer-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+/* ========================================
+   Footer Main Row
+   ======================================== */
+
+.footer-main {
+  display: grid;
+  grid-template-columns: 240px 100px 100px 1fr;
+  gap: 40px;
+  align-items: flex-end;
+}
+
+/* ========================================
+   Brand Column
+   ======================================== */
+
+.footer-brand {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-logo-link {
+  display: inline-block;
+}
+
+.footer-logo {
+  height: 44px;
+  width: 200px;
+  object-fit: contain;
+  display: block;
+}
+
+.footer-tagline {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.65;
+  margin: 0;
+  max-width: 220px;
+}
+
+/* ========================================
+   LinkedIn
+   ======================================== */
+
+.footer-linkedin {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background-color: #000000;
+  border-radius: 6px;
+  color: #ffffff;
+  text-decoration: none;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+}
+
+.footer-linkedin:hover {
+  background-color: #005885;
+  transform: translateY(-1px);
+}
+
+.linkedin-icon {
+  width: 17px;
+  height: 17px;
+}
+
+/* ========================================
+   Nav Columns
+   ======================================== */
+
+.footer-nav {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.footer-nav-link {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 13.5px;
+  font-weight: 400;
+  color: #333333;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.footer-nav-link:hover {
+  color: #C62828;
+}
+
+/* ========================================
+   Sponsor Logos
+   ======================================== */
+
+.footer-sponsors {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  justify-self: end;
+}
+
+.sponsors-row {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  flex-wrap: wrap;
+}
+
+.sponsor-logo {
+  width: auto;
+  max-width: 110px;
+  object-fit: contain;
+  transition: opacity 0.2s ease;
+}
+
+ 
+
+/* ========================================
+   Divider
+   ======================================== */
+
+.footer-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #d8d8d4;
+}
+
+/* ========================================
+   Footer Bottom
+   ======================================== */
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-copy {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #777777;
+  margin: 0;
+  text-align: center;
+}
+
+/* ========================================
+   Responsive - Tablet
+   ======================================== */
+
+@media (max-width: 960px) {
+  .newsletter-strip {
+    padding: 28px 32px;
+  }
+
+  .footer {
+    padding: 40px 32px 24px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr 1fr;
+    gap: 36px;
+  }
+
+  .footer-sponsors {
+    grid-column: 1 / -1;
+    justify-self: start;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile
+   ======================================== */
+
+@media (max-width: 600px) {
+  .newsletter-strip {
+    padding: 24px 20px;
+  }
+
+  .newsletter-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .newsletter-text {
+    flex: none;
+    width: 100%;
+  }
+
+  .newsletter-form {
+    width: 100%;
+    flex-direction: column;
+  }
+
+  .newsletter-input {
+    width: 100%;
+    flex: none;
+  }
+
+  .newsletter-btn {
+    width: 100%;
+    height: 46px;
+  }
+
+  .footer {
+    padding: 36px 20px 20px;
+  }
+
+  .footer-main {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .footer-sponsors {
+    grid-column: auto;
+  }
+
+  .sponsors-row {
+    gap: 16px;
+  }
+
+  .sponsor-logo {
+    height: 24px;
+    max-width: 80px;
+  }
+}

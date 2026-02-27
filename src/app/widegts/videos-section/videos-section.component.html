@@ -1,0 +1,51 @@
+<section class="videos-section">
+  <div class="videos-container">
+
+    <!-- Section Title -->
+    <h2 class="videos-heading">Dixon Leadership Summit</h2>
+
+    <!-- Player Layout -->
+    <div class="videos-layout">
+
+      <!-- Left: Main Video Player -->
+      <div class="main-player-wrapper">
+        <video
+          #mainPlayer
+          class="main-video"
+          [src]="activeVideo.src"
+          controls
+          autoplay
+          (ended)="onVideoEnded()"
+        ></video>
+      </div>
+
+      <!-- Right: Playlist -->
+      <div class="playlist-wrapper">
+        <div
+          *ngFor="let video of videos; let i = index"
+          class="playlist-item"
+          [class.active]="activeIndex === i"
+          (click)="selectVideo(i)"
+        >
+          <!-- Thumbnail -->
+          <div class="playlist-thumb">
+            <video
+              class="thumb-video"
+              [src]="video.src"
+              preload="metadata"
+              muted
+            ></video>
+            <div class="thumb-overlay">
+              <span class="thumb-play-icon">&#9654;</span>
+            </div>
+          </div>
+
+          <!-- Title -->
+          <span class="playlist-title">{{ video.title }}</span>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

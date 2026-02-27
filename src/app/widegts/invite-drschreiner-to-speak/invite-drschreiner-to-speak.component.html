@@ -1,0 +1,156 @@
+<section class="invite-section">
+  <div class="invite-container">
+
+    <!-- Left: Image -->
+    <div class="invite-image-wrapper">
+      <img src="../../../assets/images/invitedrschre.png" alt="Dr. Schreiner speaking at an event" class="invite-image" />
+    </div>
+
+    <!-- Right: Form -->
+    <div class="invite-form-wrapper">
+      <h2 class="invite-heading">Invite Dr.Schreiner To Speak To Your Group</h2>
+      <p class="invite-subtext">Please tell us about your event and our team will connect with you soon!</p>
+
+      <form [formGroup]="inviteForm" (ngSubmit)="onSubmit()" class="invite-form" novalidate>
+
+        <div class="form-grid">
+
+          <!-- Left Column -->
+          <div class="form-col">
+
+            <div class="form-group">
+              <label class="form-label" for="name">Name</label>
+              <input
+                id="name"
+                type="text"
+                class="form-input"
+                placeholder="Your name"
+                formControlName="name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="email">Email</label>
+              <input
+                id="email"
+                type="email"
+                class="form-input"
+                placeholder="you@company.com"
+                formControlName="email"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="phone">Phone number</label>
+              <div class="phone-input-wrapper">
+                <select class="phone-country-select" formControlName="countryCode">
+                  <option *ngFor="let country of countries" [value]="country.dial_code">
+                    {{ country.flag }} {{ country.code }} {{ country.dial_code }}
+                  </option>
+                </select>
+                <input
+                  id="phone"
+                  type="tel"
+                  class="form-input phone-number-input"
+                  placeholder="+1 (555) 000-0000"
+                  formControlName="phone"
+                />
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="organization">Organization</label>
+              <input
+                id="organization"
+                type="text"
+                class="form-input"
+                formControlName="organization"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="eventName">Event Name</label>
+              <input
+                id="eventName"
+                type="text"
+                class="form-input"
+                formControlName="eventName"
+              />
+            </div>
+
+          </div>
+
+          <!-- Right Column -->
+          <div class="form-col">
+
+            <div class="form-group">
+              <label class="form-label" for="eventLocation">Event Location</label>
+              <input
+                id="eventLocation"
+                type="text"
+                class="form-input"
+                formControlName="eventLocation"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="eventDate">Event Date</label>
+              <input
+                id="eventDate"
+                type="date"
+                class="form-input"
+                formControlName="eventDate"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="expectedAttendance">Expected Attendance</label>
+              <input
+                id="expectedAttendance"
+                type="number"
+                class="form-input"
+                formControlName="expectedAttendance"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="hearAbout">How Did You Hear About Dr.Schreiner?</label>
+              <input
+                id="hearAbout"
+                type="text"
+                class="form-input"
+                formControlName="hearAbout"
+              />
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="additionalInfo">Anything Else You'd Like To Share About Your Event</label>
+              <input
+                id="additionalInfo"
+                type="text"
+                class="form-input"
+                formControlName="additionalInfo"
+              />
+            </div>
+
+          </div>
+
+        </div>
+
+        <!-- Submit Button -->
+        <div class="form-submit-row">
+          <button
+            type="submit"
+            class="btn-submit"
+            [disabled]="inviteForm.invalid || isLoading"
+          >
+            <span *ngIf="isLoading" class="btn-spinner"></span>
+            <span *ngIf="!isLoading">Get In Touch</span>
+          </button>
+        </div>
+
+      </form>
+    </div>
+
+  </div>
+</section>

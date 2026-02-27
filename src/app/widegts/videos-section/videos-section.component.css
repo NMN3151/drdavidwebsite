@@ -1,0 +1,245 @@
+/* ========================================
+   Videos Section - Web View
+   ======================================== */
+
+.videos-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 56px 48px 72px;
+}
+
+.videos-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* ========================================
+   Section Heading
+   ======================================== */
+
+.videos-heading {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 400;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+}
+
+/* ========================================
+   Layout: Player + Playlist
+   ======================================== */
+
+.videos-layout {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  gap: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  min-height: 420px;
+}
+
+/* ========================================
+   Main Player
+   ======================================== */
+
+.main-player-wrapper {
+  flex: 1;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 420px;
+  position: relative;
+}
+
+.main-video {
+  width: 100%;
+  height: 100%;
+  max-height: 520px;
+  object-fit: contain;
+  display: block;
+  background-color: #000000;
+}
+
+/* ========================================
+   Playlist
+   ======================================== */
+
+.playlist-wrapper {
+  flex: 0 0 300px;
+  width: 300px;
+  background-color: #1e1e1e;
+  overflow-y: auto;
+  max-height: 520px;
+  scroll-behavior: smooth;
+}
+
+/* Custom scrollbar */
+.playlist-wrapper::-webkit-scrollbar {
+  width: 6px;
+}
+.playlist-wrapper::-webkit-scrollbar-track {
+  background: #1e1e1e;
+}
+.playlist-wrapper::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 3px;
+}
+.playlist-wrapper::-webkit-scrollbar-thumb:hover {
+  background: #666666;
+}
+
+/* ========================================
+   Playlist Item
+   ======================================== */
+
+.playlist-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  cursor: pointer;
+  border-bottom: 1px solid #2a2a2a;
+  transition: background-color 0.2s ease;
+}
+
+.playlist-item:hover {
+  background-color: #2e2e2e;
+}
+
+.playlist-item.active {
+  background-color: #3a3a3a;
+  border-left: 3px solid #C62828;
+  padding-left: 9px;
+}
+
+/* ========================================
+   Playlist Thumbnail
+   ======================================== */
+
+.playlist-thumb {
+  flex-shrink: 0;
+  width: 96px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #000000;
+  position: relative;
+}
+
+.thumb-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+
+.thumb-overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.playlist-item:hover .thumb-overlay,
+.playlist-item.active .thumb-overlay {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.thumb-play-icon {
+  font-size: 18px;
+  color: #ffffff;
+  line-height: 1;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.playlist-item.active .thumb-play-icon {
+  color: #C62828;
+}
+
+/* ========================================
+   Playlist Title
+   ======================================== */
+
+.playlist-title {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12.5px;
+  font-weight: 400;
+  color: #d1d5db;
+  line-height: 1.45;
+  flex: 1;
+}
+
+.playlist-item.active .playlist-title {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+/* ========================================
+   Mobile View - 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .videos-section {
+    padding: 36px 0 48px;
+  }
+
+  .videos-container {
+    gap: 16px;
+    padding: 0 16px;
+  }
+
+  .videos-heading {
+    font-size: 15px;
+    padding: 0 4px;
+  }
+
+  .videos-layout {
+    flex-direction: column;
+    border-radius: 6px;
+    min-height: unset;
+  }
+
+  .main-player-wrapper {
+    min-height: 220px;
+    width: 100%;
+  }
+
+  .main-video {
+    max-height: 260px;
+  }
+
+  .playlist-wrapper {
+    flex: none;
+    width: 100%;
+    max-height: 320px;
+  }
+
+  .playlist-item {
+    padding: 8px 10px;
+    gap: 10px;
+  }
+
+  .playlist-thumb {
+    width: 80px;
+    height: 50px;
+  }
+
+  .playlist-title {
+    font-size: 12px;
+  }
+
+  .thumb-play-icon {
+    font-size: 15px;
+  }
+}

@@ -1,0 +1,109 @@
+/* ========================================
+   Sponsors Section
+   ======================================== */
+
+.sponsors {
+  width: 100%;
+  background-color: var(--pure-white);
+  padding: 56px 0;
+}
+
+.sponsors-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ========================================
+   Rows
+   ======================================== */
+
+.sponsors-row {
+display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0;
+    padding: 16px 0;
+    justify-content: space-between;
+}
+
+/* ========================================
+   Divider between rows
+   ======================================== */
+
+.sponsors-divider {
+  width: 100%;
+  height: 1px;
+  background-color: #E5E7EB;
+  margin: 8px 0;
+}
+
+/* ========================================
+   Individual Sponsor Item
+   ======================================== */
+
+.sponsor-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease;
+  cursor: pointer;
+  position: relative;
+}
+
+ 
+ 
+ 
+
+/* ========================================
+   Logo Image
+   ======================================== */
+
+.sponsor-logo {
+  display: block;
+  max-width: 130px;
+  width: auto;
+  object-fit: contain;
+  transition: filter 0.25s ease, opacity 0.25s ease, transform 0.22s ease;
+}
+
+ 
+ 
+
+@media (max-width: 480px) {
+  .sponsors {
+    padding: 36px 0;
+  }
+
+  .sponsors-container {
+    padding: 0 16px;
+    gap: 0;
+  }
+
+  .sponsors-row {
+    gap: 0;
+    padding: 8px 0;
+    justify-content: center;
+  }
+
+  .sponsor-item {
+    padding: 14px 18px;
+    width: calc(33.333% - 0px);
+    box-sizing: border-box;
+  }
+
+  .sponsor-logo {
+    max-height: 32px;
+    max-width: 90px;
+  }
+
+  .sponsors-divider {
+    margin: 4px 0;
+  }
+}

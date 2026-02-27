@@ -1,0 +1,151 @@
+/* ========================================
+   Who On Your Team Section
+   ======================================== */
+
+.wyt-section {
+  width: 100%;
+  background-color: var(--pure-white);
+  padding: 50px 0;
+}
+
+.wyt-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 80px;
+}
+
+/* ========================================
+   Left Column — Text
+   ======================================== */
+
+.wyt-left {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.wyt-heading {
+  font-family: var(--newsreader-font-family);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.3;
+  color: var(--primary-dark);
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+.wyt-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wyt-lead {
+  font-family: var(--newsreader-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-grey);
+  line-height: 1.7;
+  margin: 0;
+}
+
+.wyt-text {
+  font-family: var(--inria-serif-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--dark-grey);
+  margin: 0;
+}
+
+/* ========================================
+   Right Column — Image
+   ======================================== */
+
+.wyt-right {
+  flex: 0 0 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wyt-image-wrapper {
+  width: 100%;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12), 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  position: relative;
+}
+
+.wyt-image-wrapper::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  pointer-events: none;
+}
+
+.wyt-image-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.wyt-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  transition: transform 0.45s ease;
+}
+
+.wyt-image-wrapper:hover .wyt-image {
+  transform: scale(1.02);
+}
+
+/* ========================================
+   Responsive — 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .wyt-section {
+    padding: 52px 0;
+  }
+
+  .wyt-container {
+    flex-direction: column;
+    padding: 0 20px;
+    gap: 36px;
+  }
+
+  .wyt-left {
+    gap: 24px;
+  }
+
+  .wyt-heading {
+    font-size: 26px;
+    line-height: 1.35;
+  }
+
+  .wyt-lead {
+    font-size: 14.5px;
+  }
+
+  .wyt-text {
+    font-size: 14px;
+  }
+
+  .wyt-right {
+    flex: unset;
+    width: 100%;
+  }
+
+  .wyt-image-wrapper {
+    border-radius: 10px;
+  }
+}

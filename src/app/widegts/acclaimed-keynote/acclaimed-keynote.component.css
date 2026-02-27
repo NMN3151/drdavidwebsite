@@ -1,0 +1,261 @@
+/* ========================================
+   Keynote Section - Web View
+   ======================================== */
+
+.keynote-section {
+  width: 100%;
+  background-color: #ffffff;
+  padding: 72px 48px 80px;
+}
+
+.keynote-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ========================================
+   Heading
+   ======================================== */
+
+.keynote-heading {
+  font-family: var(--newsreader-font-family);
+  font-size: 42px;
+  font-weight: 400;
+  line-height: 1.2;
+  color: var(--primary-dark);
+  letter-spacing: -0.5px;
+  margin: 0;
+}
+
+/* ========================================
+   Main Content Row
+   ======================================== */
+
+.keynote-content {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 56px;
+}
+
+/* ========================================
+   Left Column
+   ======================================== */
+
+.keynote-left {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.keynote-block {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.keynote-label {
+  font-family: var(--redley-font-family);
+  font-size: 18px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+}
+
+.keynote-text {
+  font-family: var(--redley-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.7;
+}
+
+/* ========================================
+   Outcomes List
+   ======================================== */
+
+.keynote-outcomes {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.keynote-outcome-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-family: var(--redley-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.65;
+}
+
+.outcome-bullet {
+  flex-shrink: 0;
+  font-size: 20px;
+  color: #555555;
+  margin-top: 1px;
+}
+
+/* ========================================
+   Customized Note
+   ======================================== */
+
+.keynote-customized {
+  font-family: var(--redley-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.6;
+}
+
+/* ========================================
+   Download Button
+   ======================================== */
+
+.btn-download {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 11px 22px;
+  background-color: #C62828;
+  color: #ffffff;
+  font-family: var(--inria-serif-font-family);
+  font-size: 13.5px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: flex-start;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.btn-download:hover {
+  background-color: #A61B1B;
+  transform: translateY(-1px);
+}
+
+.btn-download:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   Right Column: Video
+   ======================================== */
+
+.keynote-video-wrapper {
+  flex: 0 0 50%;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  aspect-ratio: 16 / 9;
+  align-self: flex-start;
+}
+.keynote-iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  display: block;
+}
+
+/* ========================================
+   Testimonial
+   ======================================== */
+
+.keynote-testimonial {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  background-color: #ffffff;
+}
+
+.testimonial-quote {
+  font-family: var(--redley-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.75;
+}
+
+.testimonial-author {
+  font-family: var(--inria-serif-font-family);
+  font-size: 17px;
+  font-weight: 700;
+  color: #1a1a1a;
+  letter-spacing: 0.01em;
+}
+
+/* ========================================
+   Mobile View - 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .keynote-section {
+    padding: 48px 20px 56px;
+  }
+
+  .keynote-container {
+    gap: 36px;
+  }
+
+  .keynote-heading {
+    font-size: 26px;
+  }
+
+  .keynote-content {
+    flex-direction: column;
+    gap: 36px;
+  }
+
+  .keynote-left {
+    flex: none;
+    width: 100%;
+    gap: 22px;
+  }
+
+  .keynote-label {
+    font-size: 13.5px;
+  }
+
+  .keynote-text,
+  .keynote-outcome-item,
+  .keynote-customized {
+    font-size: 13.5px;
+  }
+
+  .btn-download {
+    width: 100%;
+    justify-content: center;
+    font-size: 13px;
+    padding: 12px 20px;
+  }
+
+  .keynote-video-wrapper {
+    width: 100%;
+    border-radius: 6px;
+  }
+
+  .keynote-testimonial {
+    padding: 20px 18px;
+    gap: 10px;
+  }
+
+  .testimonial-quote {
+    font-size: 13.5px;
+  }
+
+  .testimonial-author {
+    font-size: 13px;
+  }
+}
