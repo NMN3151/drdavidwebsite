@@ -40,11 +40,10 @@
 
 .banner-quote {
   font-family: var(--inria-serif-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #1a1a1a;
-  line-height: 1.85;
-  max-width: 960px;
+  line-height: 1.7;
 }
 
 /* ========================================
@@ -60,7 +59,7 @@
 
 .author-name {
   font-family: var(--header-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: bold;
   color: #1a1a1a;
   letter-spacing: 0.01em;
@@ -70,12 +69,11 @@
 
 .author-sub {
   font-family: var(--inria-serif-font-family);
-  font-size: 17px;
+  font-size: 19px;
   font-weight: regular;
   color: #1a1a1a;
   line-height: 1.5;
   text-align: center;
-  font-style: italic;
 }
 
  

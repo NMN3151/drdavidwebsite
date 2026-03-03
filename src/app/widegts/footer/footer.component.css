@@ -18,7 +18,7 @@
 }
 
 .newsletter-text {
-  flex: 0 0 450px;
+  flex: 0 0 485px;
   min-width: 220px;
 }
 
@@ -34,7 +34,7 @@
 
 .newsletter-desc {
   font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #555555;
   line-height: 1.6;
@@ -120,10 +120,9 @@
    ======================================== */
 
 .footer-main {
-  display: grid;
-  grid-template-columns: 240px 100px 100px 1fr;
-  gap: 40px;
+  display: flex;
   align-items: flex-end;
+  gap: 40px;
 }
 
 /* ========================================
@@ -131,9 +130,11 @@
    ======================================== */
 
 .footer-brand {
+  flex: 2;                      /* wider than nav columns */
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
+  max-width: 320px;
 }
 
 .footer-logo-link {
@@ -145,16 +146,17 @@
   width: 200px;
   object-fit: contain;
   display: block;
+  flex-shrink: 0;
 }
 
 .footer-tagline {
   font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
   color: #555555;
   line-height: 1.65;
   margin: 0;
-  max-width: 220px;
+  max-width: 280px;             /* forces text into ~3 lines */
 }
 
 /* ========================================
@@ -171,6 +173,7 @@
   border-radius: 6px;
   color: #ffffff;
   text-decoration: none;
+  flex-shrink: 0;
   transition: background-color 0.2s ease, transform 0.15s ease;
 }
 
@@ -190,8 +193,8 @@
 
 .footer-nav {
   display: flex;
+  margin-bottom: 15px;
   flex-direction: column;
-  margin-bottom: 20px;
 }
 
 .footer-nav-list {
@@ -205,7 +208,7 @@
 
 .footer-nav-link {
   font-family: 'Georgia', 'Times New Roman', serif;
-  font-size: 13.5px;
+  font-size: 16px;
   font-weight: 400;
   color: #333333;
   text-decoration: none;
@@ -222,9 +225,10 @@
 
 .footer-sponsors {
   display: flex;
+  flex: 2;
   flex-direction: column;
   gap: 25px;
-  justify-self: end;
+  align-items: flex-end;      /* logos pushed to left */
 }
 
 .sponsors-row {
@@ -240,8 +244,6 @@
   object-fit: contain;
   transition: opacity 0.2s ease;
 }
-
- 
 
 /* ========================================
    Divider
@@ -286,13 +288,22 @@
   }
 
   .footer-main {
-    grid-template-columns: 1fr 1fr;
+    flex-wrap: wrap;
     gap: 36px;
   }
 
+  .footer-brand {
+    flex: 1 1 100%;             /* full width on tablet */
+    max-width: 100%;
+  }
+
+  .footer-nav {
+    flex: 1 1 auto;
+    margin-bottom: 0;
+  }
+
   .footer-sponsors {
-    grid-column: 1 / -1;
-    justify-self: start;
+    flex: 1 1 100%;             /* full width on tablet */
   }
 }
 
@@ -300,7 +311,14 @@
    Responsive - Mobile
    ======================================== */
 
+ 
+
 @media (max-width: 600px) {
+  .newsletter-heading {
+  font-size: 24px;
+}
+
+
   .newsletter-strip {
     padding: 24px 20px;
   }
@@ -334,18 +352,53 @@
   .footer {
     padding: 36px 20px 20px;
   }
+ 
 
+  .footer-brand {
+    flex: none;
+    width: 100%;
+    max-width: 100%;
+  }
+
+  /* ← nav columns side by side on mobile */
+  .footer-nav {
+    flex: none;
+    width: 100%;
+    margin-bottom: 0;
+  }
+
+  /* put both nav columns in a row */
+  .footer-main .footer-nav:nth-child(2),
+  .footer-main .footer-nav:nth-child(3) {
+    display: inline-flex;
+    width: auto;
+  }
+
+  /* wrapper trick: nav columns sit side by side */
   .footer-main {
-    grid-template-columns: 1fr;
-    gap: 28px;
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  .footer-nav-list {
+    gap: 12px;
+  }
+
+  .footer-nav-link {
+    font-size: 15px;
+    text-align: left;          /* ← force left alignment */
   }
 
   .footer-sponsors {
-    grid-column: auto;
+    flex: none;
+    width: 100%;
+    align-items: flex-start;
   }
 
   .sponsors-row {
     gap: 16px;
+    justify-content: flex-start; /* ← logos left aligned */
   }
 
   .sponsor-logo {

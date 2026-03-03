@@ -92,7 +92,7 @@
 
 .better-text {
   font-family: var(--inria-serif-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--dark-grey);
   line-height: 1.75;
@@ -176,7 +176,7 @@
 
 .better-quote-text {
   font-family: var(--inria-serif-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--dark-grey);
   line-height: 1.8;
@@ -186,7 +186,7 @@
 
 .better-quote-author {
   font-family: var(--font-primary);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 700;
   color: var(--primary-dark);
   letter-spacing: 0.4px;

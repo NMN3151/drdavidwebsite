@@ -61,7 +61,7 @@
 }
 
 .why-bullet {
-  font-size: 18px;
+  font-size: 20px;
   color: #1a1a1a;
   flex-shrink: 0;
   line-height: 1.6;
@@ -70,7 +70,7 @@
 
 .why-list-item p {
   font-family: var(--inria-serif-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #2a2a2a;
   margin: 0;
@@ -152,7 +152,7 @@
 
 .why-testimonial-text {
   font-family: var(--inria-serif-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #333333;
   line-height: 1.75;
@@ -161,7 +161,7 @@
 
 .why-testimonial-source {
   font-family: var(--inria-serif-font-family);
-  font-size: 18px;;
+  font-size: 20px;;
   font-weight: 400;
   color: #1a1a1a;
   line-height: 1.5;

@@ -59,15 +59,15 @@
 
 .keynote-label {
   font-family: var(--redley-font-family);
-  font-size: 18px;
-  font-weight: 700;
-  color: #1a1a1a;
+  font-size: 20px;
+  color: #000000d1;
   letter-spacing: 0.01em;
+  font-weight:600;
 }
 
 .keynote-text {
   font-family: var(--redley-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #333333;
   line-height: 1.7;
@@ -90,7 +90,7 @@
   align-items: flex-start;
   gap: 10px;
   font-family: var(--redley-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #333333;
   line-height: 1.65;
@@ -109,7 +109,7 @@
 
 .keynote-customized {
   font-family: var(--redley-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #333333;
   line-height: 1.6;
@@ -182,7 +182,7 @@
 
 .testimonial-quote {
   font-family: var(--redley-font-family);
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 400;
   color: #333333;
   line-height: 1.75;
@@ -190,7 +190,7 @@
 
 .testimonial-author {
   font-family: var(--inria-serif-font-family);
-  font-size: 17px;
+  font-size: 20px;
   font-weight: 700;
   color: #1a1a1a;
   letter-spacing: 0.01em;

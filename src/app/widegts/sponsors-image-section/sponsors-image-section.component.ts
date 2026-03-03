@@ -9,7 +9,8 @@ import { filter } from 'rxjs/operators';
 })
 export class SponsorsImageSectionComponent implements OnInit {
 
-  sponsorsRow1 = [
+  // Default route images
+  private defaultRow1 = [
     { src: '../../../assets/images/sponserimage11.png', alt: 'Sponsor 11' },
     { src: '../../../assets/images/sponserimage10.png', alt: 'Sponsor 10' },
     { src: '../../../assets/images/sponserimage9.png',  alt: 'Sponsor 9'  },
@@ -18,7 +19,7 @@ export class SponsorsImageSectionComponent implements OnInit {
     { src: '../../../assets/images/sponserimage6.png',  alt: 'Sponsor 6'  },
   ];
 
-  private allSponsorRow2 = [
+  private defaultRow2 = [
     { src: '../../../assets/images/sponserimage5.png', alt: 'Sponsor 5' },
     { src: '../../../assets/images/sponserimage4.png', alt: 'Sponsor 4' },
     { src: '../../../assets/images/sponserimage3.png', alt: 'Sponsor 3' },
@@ -26,34 +27,44 @@ export class SponsorsImageSectionComponent implements OnInit {
     { src: '../../../assets/images/sponserimage1.png', alt: 'Sponsor 1' },
   ];
 
-  // Srcs to hide when route contains a segment (e.g. /home/speaking-to)
-  private hiddenOnSubRoutes = [
-    '../../../assets/images/sponserimage5.png',
-    '../../../assets/images/sponserimage4.png',
+  // speaking-to route images
+  private speakingRow1 = [
+    { src: '../../../assets/images/sponserimage5.png', alt: 'Sponsor 5' },
+    { src: '../../../assets/images/sponserimage4.png', alt: 'Sponsor 10' },
+    { src: '../../../assets/images/sponserimage7.png',  alt: 'Sponsor 9'  },
+    { src: '../../../assets/images/sponserimage6.png',  alt: 'Sponsor 8'  }, 
   ];
 
-  sponsorsRow2 = [...this.allSponsorRow2];
+  private speakingRow2 = [
+    { src: '../../../assets/images/sponserimage3.png', alt: 'Sponsor 3' },
+    { src: '../../../assets/images/sponserimage2.png', alt: 'Sponsor 2' },
+    { src: '../../../assets/images/sponserimage1.png', alt: 'Sponsor 1' },
+  ];
+
+  // Active display arrays (bound in template)
+  sponsorsRow1: { src: string; alt: string }[] = [];
+  sponsorsRow2: { src: string; alt: string }[] = [];
 
   constructor(private router: Router) {}
 
   ngOnInit(): void {
-    // Run on initial load
-    this.filterRow2(this.router.url);
+    this.updateSponsors(this.router.url);
 
-    // Re-run on every subsequent navigation
     this.router.events
       .pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((event) => {
-        this.filterRow2((event as NavigationEnd).urlAfterRedirects);
+        this.updateSponsors((event as NavigationEnd).urlAfterRedirects);
       });
   }
 
-  private filterRow2(url: string): void {
-    const hasSubRoute = this.hasChildRoute(url);
-
-    this.sponsorsRow2 = hasSubRoute
-      ? this.allSponsorRow2.filter(s => !this.hiddenOnSubRoutes.includes(s.src))
-      : [...this.allSponsorRow2];
+  private updateSponsors(url: string): void {
+    if (this.hasChildRoute(url)) {
+      this.sponsorsRow1 = [...this.speakingRow1];
+      this.sponsorsRow2 = [...this.speakingRow2];
+    } else {
+      this.sponsorsRow1 = [...this.defaultRow1];
+      this.sponsorsRow2 = [...this.defaultRow2];
+    }
   }
 
   private hasChildRoute(url: string): boolean {
