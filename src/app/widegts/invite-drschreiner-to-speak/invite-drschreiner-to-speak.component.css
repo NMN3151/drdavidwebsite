@@ -24,10 +24,13 @@
 .invite-image-wrapper {
   flex: 0 0 420px;
   width: 420px;
+  display: block;
   height: 580px;
   border-radius: 4px;
 }
-
+.invite-image-wrapper-mobile {
+  display: none;
+}
 .invite-image {
   width: 100%;
   height: 100%;
@@ -244,7 +247,6 @@
 /* ========================================
    Mobile View - 480px
    ======================================== */
-
 @media (max-width: 480px) {
   .invite-section {
     padding: 40px 20px 52px;
@@ -255,11 +257,27 @@
     gap: 32px;
   }
 
+  /* hide desktop image on mobile */
   .invite-image-wrapper {
-    flex: none;
+    display: none;
+  }
+
+  /* show mobile image on mobile */
+  .invite-image-wrapper-mobile {
+    display: block;
     width: 100%;
     height: 260px;
     border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 4px;
+  }
+
+  .invite-image-wrapper-mobile .invite-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
   }
 
   .invite-heading {

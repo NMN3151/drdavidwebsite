@@ -354,7 +354,6 @@
 /* ========================================
    Responsive - 480px
    ======================================== */
-
 @media (max-width: 480px) {
   .hero {
     height: auto;
@@ -364,7 +363,7 @@
   }
 
   .hero-bg-img {
-    object-position: 65% top;
+    object-position: center top;  /* ← centers face horizontally */
   }
 
   .hero-overlay {
