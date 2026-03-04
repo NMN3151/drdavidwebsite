@@ -22,6 +22,10 @@ import { ForMeetingProfessinalsComponent } from './widegts/for-meeting-professin
 import { AcclaimedKeynoteComponent } from './widegts/acclaimed-keynote/acclaimed-keynote.component';
 import { VideosSectionComponent } from './widegts/videos-section/videos-section.component';
 import { DrSchreinerTextBannerComponent } from './widegts/dr-schreiner-text-banner/dr-schreiner-text-banner.component';
+import { BooksInTheNewsComponent } from './widegts/books-in-the-news/books-in-the-news.component';
+import { BookComponent } from './home/book/book.component';
+import { BooksStarsRatingComponent } from './widegts/books-stars-rating/books-stars-rating.component';
+import { BooksAvailableForOrderTodayComponent } from './widegts/books-available-for-order-today/books-available-for-order-today.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { DrSchreinerTextBannerComponent } from './widegts/dr-schreiner-text-bann
     ForMeetingProfessinalsComponent,
     AcclaimedKeynoteComponent,
     VideosSectionComponent,
-    DrSchreinerTextBannerComponent
+    DrSchreinerTextBannerComponent,
+    BookComponent,
+    BooksInTheNewsComponent,
+    BooksStarsRatingComponent,
+    BooksAvailableForOrderTodayComponent
     
   ],
   imports: [

@@ -1,0 +1,36 @@
+<section class="bsr-section">
+  <div class="bsr-container">
+
+    <!-- Three Photos Row -->
+    <div class="bsr-photos-row">
+      <div class="bsr-photo-wrapper">
+        <img src="../../../assets/images/starrating1.jpg" alt="Book event photo 1" class="bsr-photo" />
+      </div>
+      <div class="bsr-photo-wrapper">
+        <img src="../../../assets/images/starrating2.jpg" alt="Book event photo 2" class="bsr-photo" />
+      </div>
+      <div class="bsr-photo-wrapper">
+        <img src="../../../assets/images/starrating3.jpg" alt="Book event photo 3" class="bsr-photo" />
+      </div>
+    </div>
+
+    <!-- Reviews Block -->
+    <div class="bsr-reviews-block">
+
+      <!-- Star Rating -->
+      <div class="bsr-stars">
+        <span class="bsr-star" *ngFor="let star of stars">&#9733;</span>
+      </div>
+
+      <!-- Testimonials -->
+      <div class="bsr-testimonials">
+        <div class="bsr-testimonial" *ngFor="let review of reviews">
+          <p class="bsr-review-text">{{ review.text }}</p>
+          <p class="bsr-review-author">– {{ review.author }}</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</section>

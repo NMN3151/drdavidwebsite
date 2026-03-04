@@ -1,0 +1,221 @@
+/* ========================================
+   Books In The News Section
+   ======================================== */
+
+.bins-section {
+  width: 100%;
+  background-color: #F3F4F6;
+  padding: 72px 48px;
+}
+
+.bins-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 320px 1fr 1fr;
+  gap: 48px;
+  align-items: flex-start;
+}
+
+/* ========================================
+   Left — In The News Column
+   ======================================== */
+
+.bins-news-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bins-news-heading {
+  font-family: var(--newsreader-font-family, 'Georgia', serif);
+  font-size: 28px;
+  font-weight: 400;
+  color: var(--primary-dark, #0B0F1A);
+  letter-spacing: -0.3px;
+  line-height: 1.2;
+  margin: 0;
+}
+
+.bins-news-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  padding: 0;
+  margin: 0;
+}
+
+.bins-news-item {
+  border-left: 3px solid var(--accent-red, #C62828);
+  padding: 10px 0 10px 14px;
+}
+
+.bins-news-link {
+  font-family: var(--inria-serif-font-family, 'Georgia', serif);
+  font-size: 15px;
+  font-weight: 400;
+  color: var(--primary-dark, #0B0F1A);
+  text-decoration: none;
+  line-height: 1.5;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.bins-news-link:hover {
+  color: var(--accent-red, #C62828);
+}
+
+.bins-news-cta {
+  padding-top: 4px;
+}
+
+/* ========================================
+   Cards (Book + Speaking)
+   ======================================== */
+
+.bins-card {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  background-color: #ffffff;
+  border-radius: 4px;
+  overflow: hidden;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.07);
+  transition: box-shadow 0.25s ease, transform 0.2s ease;
+}
+
+.bins-card:hover {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.11);
+  transform: translateY(-2px);
+}
+
+.bins-card-image-wrapper {
+  width: 100%;
+  height: 260px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.bins-card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.bins-card:hover .bins-card-image {
+  transform: scale(1.03);
+}
+
+.bins-card-body {
+  padding: 24px 24px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bins-card-title {
+  font-family: var(--newsreader-font-family, 'Georgia', serif);
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--primary-dark, #0B0F1A);
+  line-height: 1.35;
+  letter-spacing: -0.2px;
+  margin: 0;
+}
+
+.bins-card-desc {
+  font-family: var(--inria-serif-font-family, 'Georgia', serif);
+  font-size: 15px;
+  font-weight: 400;
+  color: #555555;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ========================================
+   Shared Outline Button
+   ======================================== */
+
+.bins-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 22px;
+  border: 1.5px solid var(--primary-dark, #0B0F1A);
+  border-radius: 50px;
+  background-color: transparent;
+  font-family: var(--inria-serif-font-family, 'Georgia', serif);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--primary-dark, #0B0F1A);
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+  width: fit-content;
+  text-decoration: none;
+}
+
+.bins-btn-outline:hover {
+  background-color: var(--primary-dark, #0B0F1A);
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.bins-btn-outline:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   Mobile View — 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .bins-section {
+    padding: 40px 20px 52px;
+  }
+
+  .bins-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .bins-news-heading {
+    font-size: 22px;
+  }
+
+  .bins-news-link {
+    font-size: 13.5px;
+  }
+
+  .bins-news-item {
+    padding: 9px 0 9px 12px;
+  }
+
+  .bins-card-image-wrapper {
+    height: 200px;
+  }
+
+  .bins-card-body {
+    padding: 18px 18px 22px;
+    gap: 10px;
+  }
+
+  .bins-card-title {
+    font-size: 17px;
+  }
+
+  .bins-card-desc {
+    font-size: 13.5px;
+  }
+
+  .bins-btn-outline {
+    width: 100%;
+    justify-content: center;
+    padding: 11px 22px;
+    font-size: 14px;
+  }
+}

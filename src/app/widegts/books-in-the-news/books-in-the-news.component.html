@@ -1,0 +1,58 @@
+<section class="bins-section">
+  <div class="bins-container">
+
+    <!-- Left: In The News -->
+    <div class="bins-news-col">
+      <h2 class="bins-news-heading">In The News</h2>
+      <ul class="bins-news-list">
+        <li class="bins-news-item" *ngFor="let article of newsArticles">
+          <a [href]="article.url" target="_blank" rel="noopener" class="bins-news-link">
+            {{ article.title }}
+          </a>
+        </li>
+      </ul>
+      <div class="bins-news-cta">
+        <button class="bins-btn-outline" (click)="viewAllNews()">View All</button>
+      </div>
+    </div>
+
+    <!-- Center: Book -->
+    <div class="bins-card">
+      <div class="bins-card-image-wrapper">
+        <img
+          src="../../../assets/images/bethebestpartoftheir.jpg"
+          alt="Be The Best Part of Their Day Book"
+          class="bins-card-image"
+        />
+      </div>
+      <div class="bins-card-body">
+        <h3 class="bins-card-title">Be The Best Part of Their Day - Available to Order!</h3>
+        <p class="bins-card-desc">
+          I'm thrilled to announce the publication of my best-selling book, "Be the Best
+          Part of Their Day: Supercharging Communication with Values-Driven Leadership."
+        </p>
+        <button class="bins-btn-outline" (click)="orderBook()">Order Today</button>
+      </div>
+    </div>
+
+    <!-- Right: Public Speaking -->
+    <div class="bins-card">
+      <div class="bins-card-image-wrapper">
+        <img
+          src="../../../assets/images/publicspeaking.jpg"
+          alt="Public Speaking"
+          class="bins-card-image"
+        />
+      </div>
+      <div class="bins-card-body">
+        <h3 class="bins-card-title">Public Speaking</h3>
+        <p class="bins-card-desc">
+          As a renowned expert in executive communication, I have helped numerous
+          executives enhance their communication skills and leadership abilities.
+        </p>
+        <button class="bins-btn-outline" (click)="learnMoreSpeaking()">Learn More</button>
+      </div>
+    </div>
+
+  </div>
+</section>

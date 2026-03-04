@@ -1,0 +1,146 @@
+/* ========================================
+   Books Stars Rating Section
+   ======================================== */
+
+.bsr-section {
+  width: 100%;
+  background-color: #F3F4F6;
+  padding: 72px 48px;
+}
+
+.bsr-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+}
+
+/* ========================================
+   Photos Row
+   ======================================== */
+
+.bsr-photos-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.bsr-photo-wrapper {
+  width: 100%;
+  height: 320px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.bsr-photo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.bsr-photo-wrapper:hover .bsr-photo {
+  transform: scale(1.03);
+}
+
+/* ========================================
+   Reviews Block
+   ======================================== */
+
+.bsr-reviews-block {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+/* ========================================
+   Stars
+   ======================================== */
+
+.bsr-stars {
+  display: flex;
+  gap: 4px;
+}
+
+.bsr-star {
+  font-size: 32px;
+  color: #F59E0B;
+  line-height: 1;
+}
+
+/* ========================================
+   Testimonials
+   ======================================== */
+
+.bsr-testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 36px;
+}
+
+.bsr-testimonial {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.bsr-review-text {
+  font-family: var(--inria-serif-font-family, 'Georgia', serif);
+  font-size: 15.5px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.bsr-review-author {
+  font-family: var(--inria-serif-font-family, 'Georgia', serif);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--primary-dark, #0B0F1A);
+  font-style: italic;
+  margin: 0;
+  letter-spacing: 0.01em;
+}
+
+/* ========================================
+   Mobile View — 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .bsr-section {
+    padding: 40px 20px 52px;
+  }
+
+  .bsr-container {
+    gap: 32px;
+  }
+
+  .bsr-photos-row {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .bsr-photo-wrapper {
+    height: 220px;
+  }
+
+  .bsr-star {
+    font-size: 26px;
+  }
+
+  .bsr-review-text {
+    font-size: 13.5px;
+  }
+
+  .bsr-review-author {
+    font-size: 13px;
+  }
+
+  .bsr-testimonials {
+    gap: 28px;
+  }
+}

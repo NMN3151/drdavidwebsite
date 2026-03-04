@@ -1,0 +1,222 @@
+/* ========================================
+   Books Available For Order Today Section
+   ======================================== */
+
+.baot-section {
+  width: 100%;
+  background-color: #F3F4F6;
+  padding: 72px 48px;
+}
+
+.baot-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 360px 1fr 340px;
+  gap: 64px;
+  align-items: center;
+}
+
+/* ========================================
+   Left — Book Image
+   ======================================== */
+
+.baot-book-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.baot-book-image {
+  width: 100%;
+  max-width: 340px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 32px rgba(0, 0, 0, 0.18));
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.baot-book-image:hover {
+  transform: translateY(-6px) scale(1.02);
+  filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.22));
+}
+
+/* ========================================
+   Center — Content
+   ======================================== */
+
+.baot-content {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.baot-heading {
+  font-family: var(--newsreader-font-family, 'Georgia', serif);
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--primary-dark, #0B0F1A);
+  line-height: 1.3;
+  letter-spacing: -0.3px;
+  margin: 0;
+}
+
+/* ========================================
+   Bullet List
+   ======================================== */
+
+.baot-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.baot-list-item {
+  font-family: var(--inria-serif-font-family, 'Georgia', serif);
+  font-size: 15px;
+  font-weight: 400;
+  color: #444444;
+  line-height: 1.6;
+  padding-left: 18px;
+  position: relative;
+}
+
+.baot-list-item::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--accent-red, #C62828);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* ========================================
+   Button Row
+   ======================================== */
+
+.baot-btn-row {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.baot-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 14px 28px;
+  border-radius: 50px;
+  font-family: var(--inria-serif-font-family, 'Georgia', serif);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  border: none;
+  transition: background-color 0.2s ease, color 0.2s ease, transform 0.15s ease, box-shadow 0.2s ease;
+  white-space: nowrap;
+}
+
+.baot-btn:hover {
+  transform: translateY(-2px);
+}
+
+.baot-btn:active {
+  transform: translateY(0);
+}
+
+/* Dark filled button */
+.baot-btn-dark {
+  background-color: var(--primary-dark, #0B0F1A);
+  color: #ffffff;
+}
+
+.baot-btn-dark:hover {
+  background-color: #1e2740;
+  box-shadow: 0 4px 16px rgba(11, 15, 26, 0.25);
+}
+
+/* Light outline-filled button */
+.baot-btn-light {
+  background-color: #ffffff;
+  color: var(--primary-dark, #0B0F1A);
+  border: 1.5px solid #d1d5db;
+}
+
+.baot-btn-light:hover {
+  background-color: var(--primary-dark, #0B0F1A);
+  color: #ffffff;
+  border-color: var(--primary-dark, #0B0F1A);
+  box-shadow: 0 4px 16px rgba(11, 15, 26, 0.15);
+}
+
+/* ========================================
+   Right — Amazon Badge
+   ======================================== */
+
+.baot-badge-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.baot-badge-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.baot-badge-image:hover {
+  transform: scale(1.04) rotate(2deg);
+}
+
+/* ========================================
+   Mobile View — 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .baot-section {
+    padding: 40px 20px 52px;
+  }
+
+  .baot-container {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .baot-book-image {
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .baot-badge-image {
+    max-width: 180px;
+    margin: 0 auto;
+  }
+
+  .baot-heading {
+    font-size: 22px;
+  }
+
+  .baot-list-item {
+    font-size: 13.5px;
+  }
+
+  .baot-btn-row {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .baot-btn {
+    width: 100%;
+    font-size: 14px;
+    padding: 13px 24px;
+  }
+}
