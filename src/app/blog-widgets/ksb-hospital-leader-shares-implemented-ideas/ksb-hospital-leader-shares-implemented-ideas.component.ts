@@ -1,10 +1,13 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-ksb-hospital-leader-shares-implemented-ideas',
   templateUrl: './ksb-hospital-leader-shares-implemented-ideas.component.html',
   styleUrls: ['./ksb-hospital-leader-shares-implemented-ideas.component.css']
 })
-export class KsbHospitalLeaderSharesImplementedIdeasComponent {
+export class KsbHospitalLeaderSharesImplementedIdeasComponent implements OnInit{
+ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth'});
+  }
 
 }

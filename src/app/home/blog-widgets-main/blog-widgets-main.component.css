@@ -30,14 +30,15 @@
 }
 
 .bwm-title {
-  font-family: var(--heading-font-family, 'Nanum Myeongjo', serif);
-  font-size: 22px;
-  font-weight: 700;
-  color: var(--primary-dark, #0B0F1A);
-  line-height: 1.3;
-  letter-spacing: -0.2px;
-  margin: 0;
-  flex: 1;
+      font-family: var(--heading-font-family);
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--primary-dark, #0B0F1A)
+#0B0F1A
+;
+    letter-spacing: -0.2px;
+    margin: 0;
+    line-height: 1.2;
 }
 
 /* ========================================
