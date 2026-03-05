@@ -41,6 +41,13 @@ body {
    ======================================== */
 
 :root {
+
+
+     --blog-heading-font-size: 25px;   /* Used for article leads, rule titles */
+  --blog-body-font-size: 20px;      /* Used for body paragraphs, quotes    */
+
+
+  
   /* ========================================
      Brand Colors (From Provided Image)
      ======================================== */
