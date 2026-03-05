@@ -1,0 +1,87 @@
+<section class="bwm-section">
+  <div class="bwm-container">
+<br>
+ 
+    <!-- Header Bar -->
+    <div class="bwm-header">
+      <h1 class="bwm-title">{{ currentArticle?.title }}</h1>
+      <button class="bwm-all-articles-btn" (click)="goToAllArticles()">All Articles</button>
+    </div>
+
+    <hr class="bwm-divider" />
+
+    <!-- Article Content — conditionally rendered per slug -->
+    <div class="bwm-content">
+
+      <app-ways-to-supercharge-your-employee-reviews
+        *ngIf="currentSlug === '3-ways-to-supercharge-your-employee-reviews'">
+      </app-ways-to-supercharge-your-employee-reviews>
+
+      <app-from-good-to-great-ceo-cfo-relationship
+        *ngIf="currentSlug === 'from-good-to-great-ceo-cfo-relationship'">
+      </app-from-good-to-great-ceo-cfo-relationship>
+
+      <app-principles-and-practices-to-supercharge
+        *ngIf="currentSlug === 'principles-and-practices-to-supercharge'">
+      </app-principles-and-practices-to-supercharge>
+
+      <app-five-ways-to-engage-at-a-higher-level
+        *ngIf="currentSlug === '5-ways-to-engage-at-a-higher-level'">
+      </app-five-ways-to-engage-at-a-higher-level>
+
+      <app-rural-hospitals-struggle-under-private-equity-ownership
+        *ngIf="currentSlug === 'rural-hospitals-struggle-under-private-equity-ownership'">
+      </app-rural-hospitals-struggle-under-private-equity-ownership>
+
+      <app-ksb-hospital-leader-shares-implemented-ideas
+        *ngIf="currentSlug === 'ksb-hospital-leader-shares-implemented-ideas'">
+      </app-ksb-hospital-leader-shares-implemented-ideas>
+
+      <app-rural-hospital-ceo-local-ownership-vs-private-equity
+        *ngIf="currentSlug === 'rural-hospital-ceo-local-ownership-vs-private-equity'">
+      </app-rural-hospital-ceo-local-ownership-vs-private-equity>
+
+      <app-assessing-impact-private-equity-rural-hospitals
+        *ngIf="currentSlug === 'assessing-impact-private-equity-rural-hospitals'">
+      </app-assessing-impact-private-equity-rural-hospitals>
+
+      <app-impact-private-equity-firms-rural-hospitals
+        *ngIf="currentSlug === 'impact-private-equity-firms-rural-hospitals'">
+      </app-impact-private-equity-firms-rural-hospitals>
+
+      <app-current-model-doesnt-work-illinois-hospital-ceo
+        *ngIf="currentSlug === 'current-model-doesnt-work-illinois-hospital-ceo'">
+      </app-current-model-doesnt-work-illinois-hospital-ceo>
+
+      <app-giving-his-best
+        *ngIf="currentSlug === 'giving-his-best'">
+      </app-giving-his-best>
+
+      <app-lessons-from-children-leading-with-authentic-love
+        *ngIf="currentSlug === 'lessons-from-children-leading-with-authentic-love'">
+      </app-lessons-from-children-leading-with-authentic-love>
+
+      <app-turnover-trouble
+        *ngIf="currentSlug === 'turnover-trouble'">
+      </app-turnover-trouble>
+
+      <app-gratuity
+        *ngIf="currentSlug === 'gratuity'">
+      </app-gratuity>
+
+      <app-leading-with-love
+        *ngIf="currentSlug === 'leading-with-love'">
+      </app-leading-with-love>
+
+      <app-healthcare-is-a-right
+        *ngIf="currentSlug === 'healthcare-is-a-right'">
+      </app-healthcare-is-a-right>
+
+      <app-not-all-superheroes-wear-capes
+        *ngIf="currentSlug === 'not-all-superheroes-wear-capes'">
+      </app-not-all-superheroes-wear-capes>
+
+    </div>
+
+  </div>
+</section>

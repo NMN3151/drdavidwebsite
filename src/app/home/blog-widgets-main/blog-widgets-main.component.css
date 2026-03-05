@@ -1,0 +1,124 @@
+/* ========================================
+   Blog Widgets Main — Article Shell
+   ======================================== */
+
+.bwm-section {
+  width: 100%;
+  background-color: #F3F4F6;
+  padding: 48px 48px 72px;
+}
+
+.bwm-container {
+  max-width: 1600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ========================================
+   Header Bar
+   ======================================== */
+
+.bwm-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 16px;
+}
+
+.bwm-title {
+  font-family: var(--heading-font-family, 'Nanum Myeongjo', serif);
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--primary-dark, #0B0F1A);
+  line-height: 1.3;
+  letter-spacing: -0.2px;
+  margin: 0;
+  flex: 1;
+}
+
+/* ========================================
+   All Articles Button
+   ======================================== */
+
+.bwm-all-articles-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 20px;
+  border: 1.5px solid #9CA3AF;
+  border-radius: 50px;
+  background-color: transparent;
+  font-family: var(--header-font-family, 'Inter', sans-serif);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--primary-dark, #0B0F1A);
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  white-space: nowrap;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
+  flex-shrink: 0;
+}
+
+.bwm-all-articles-btn:hover {
+  background-color: var(--primary-dark, #0B0F1A);
+  color: #ffffff;
+  border-color: var(--primary-dark, #0B0F1A);
+  transform: translateY(-1px);
+}
+
+.bwm-all-articles-btn:active {
+  transform: translateY(0);
+}
+
+/* ========================================
+   Divider
+   ======================================== */
+
+.bwm-divider {
+  border: none;
+  border-top: 1px solid #D1D5DB;
+  margin: 0 0 40px 0;
+}
+
+/* ========================================
+   Article Content Area
+   ======================================== */
+
+.bwm-content {
+  width: 100%;
+}
+
+/* ========================================
+   Mobile View — 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .bwm-section {
+    padding: 32px 20px 52px;
+  }
+
+  .bwm-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    padding-bottom: 14px;
+  }
+
+  .bwm-title {
+    font-size: 17px;
+  }
+
+  .bwm-all-articles-btn {
+    width: 100%;
+    justify-content: center;
+    font-size: 13px;
+    padding: 10px 20px;
+  }
+
+  .bwm-divider {
+    margin-bottom: 28px;
+  }
+}

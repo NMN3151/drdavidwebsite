@@ -1,0 +1,50 @@
+<section class="blog-section">
+  <div class="blog-container">
+
+    <!-- Header -->
+    <div class="blog-header">
+      <h1 class="blog-main-title">David L. Schreiner, Ph.D.</h1>
+      <span class="blog-subtitle">IN THE NEWS</span>
+    </div>
+
+    <hr class="blog-divider" />
+
+    <!-- Articles List -->
+    <div class="blog-list">
+      <article
+        class="blog-article"
+        *ngFor="let article of pagedArticles"
+        (click)="navigateToArticle(article)"
+      >
+        <div class="blog-article-image-wrapper">
+          <img [src]="article.image" [alt]="article.title" class="blog-article-image" />
+        </div>
+        <div class="blog-article-content">
+          <h2 class="blog-article-title">{{ article.title }}</h2>
+          <p class="blog-article-excerpt">{{ article.excerpt }}</p>
+        </div>
+      </article>
+    </div>
+
+    <!-- Pagination -->
+    <div class="blog-pagination" *ngIf="totalPages > 1">
+      <button
+        class="pg-btn"
+        [class.pg-btn--active]="currentPage === page"
+        *ngFor="let page of pageNumbers"
+        (click)="goToPage(page)"
+      >
+        {{ page }}
+      </button>
+      <button
+        class="pg-btn pg-btn--arrow"
+        [disabled]="currentPage === totalPages"
+        (click)="goToPage(currentPage + 1)"
+        aria-label="Next page"
+      >
+        &#8250;
+      </button>
+    </div>
+
+  </div>
+</section>
