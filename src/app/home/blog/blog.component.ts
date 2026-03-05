@@ -107,7 +107,7 @@ export class BlogComponent implements OnInit {
       excerpt:
         'Dr. David Schreiner speaks candidly about the limitations of current private equity models in healthcare, drawing from real-world experience leading an independent rural hospital in Illinois...',
       image:
-        "../../../assets/images/blogimages/The current model doesn't work  Illinois hospital CEO on private equity hospital acquisition.png",
+        "../../../assets/images/blogimages/The current model doesn’t work  Illinois hospital CEO on private equity hospital acquisition.png",
       slug: 'current-model-doesnt-work-illinois-hospital-ceo',
     },
     {

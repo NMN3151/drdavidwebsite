@@ -48,7 +48,7 @@ export class BlogWidgetsMainComponent implements OnInit {
     return this.articles.find(a => a.slug === this.currentSlug);
   }
 
-  goToAllArticles(): void {
-    this.router.navigate(['/home/blog']);
+   goToAllArticles(): void {
+    window.history.back();
   }
 }

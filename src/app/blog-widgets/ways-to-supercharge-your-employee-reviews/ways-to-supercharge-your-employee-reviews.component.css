@@ -41,7 +41,7 @@
 /* Lead italic intro */
 .article-lead {
   font-family: var(--heading-font-family, 'Nanum Myeongjo', serif);
-  font-size: 16px;
+  font-size: var(--blog-heading-font-size, 25px);
   font-weight: 700;
   font-style: italic;
   color: var(--primary-dark, #0B0F1A);
@@ -101,7 +101,7 @@
 /* Body paragraphs */
 .article-p {
   font-family: var(--font-primary, 'Nanum Myeongjo', serif);
-  font-size: 14.5px;
+  font-size: var(--blog-body-font-size, 20px);
   font-weight: 400;
   color: #333333;
   line-height: 1.85;
@@ -131,7 +131,7 @@
 
 .article-list li {
   font-family: var(--font-primary, 'Nanum Myeongjo', serif);
-  font-size: 14.5px;
+  font-size: var(--blog-body-font-size, 20px);
   font-weight: 400;
   color: #333333;
   line-height: 1.75;
