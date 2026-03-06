@@ -34,6 +34,16 @@ export class HeaderComponent implements OnInit {
     }
   }
 
+  downloadFile(path: string, filename: string): void {
+  const anchor = document.createElement('a');
+  anchor.href = path;
+  anchor.download = filename;
+  anchor.target = '_blank';
+  document.body.appendChild(anchor);
+  anchor.click();
+  document.body.removeChild(anchor);
+}
+
   closeMobileMenu(): void {
     this.mobileMenuOpen = false;
     this.mobileDropdown = null;

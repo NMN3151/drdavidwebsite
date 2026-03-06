@@ -48,6 +48,8 @@ import { RuralHospitalsStruggleUnderPrivateEquityOwnershipComponent } from './bl
 import { PressRoomComponent } from './home/press-room/press-room.component';
 import { ContactComponent } from './home/contact/contact.component';
 import { MeetingRequestComponent } from './home/meeting-request/meeting-request.component';
+import { PodCastsComponent } from './home/pod-casts/pod-casts.component';
+import { AboutComponent } from './home/about/about.component';
 
 @NgModule({
   declarations: [
@@ -95,7 +97,9 @@ import { MeetingRequestComponent } from './home/meeting-request/meeting-request.
     BlogComponent,
     PressRoomComponent,
     ContactComponent,
-    MeetingRequestComponent
+    MeetingRequestComponent,
+   PodCastsComponent,
+   AboutComponent
 
     
   ],

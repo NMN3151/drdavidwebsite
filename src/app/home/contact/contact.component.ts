@@ -16,8 +16,10 @@ export class ContactComponent implements OnInit {
     private fb: FormBuilder,
     private router: Router
   ) {}
-
+ 
   ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth'});
+
     this.contactForm = this.fb.group({
       firstName: ['', Validators.required],
       lastName:  ['', Validators.required],

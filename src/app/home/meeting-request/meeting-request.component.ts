@@ -14,6 +14,8 @@ export class MeetingRequestComponent implements OnInit {
   constructor(private fb: FormBuilder) {}
 
   ngOnInit(): void {
+    window.scrollTo({ top: 0, behavior: 'smooth'});
+
     this.meetingForm = this.fb.group({
       firstName:   ['', Validators.required],
       lastName:    ['', Validators.required],
