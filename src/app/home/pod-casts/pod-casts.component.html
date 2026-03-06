@@ -1,0 +1,197 @@
+<div class="podcasts-section">
+  <div class="podcasts-container">
+
+    <!-- ==============================
+         AUDIO PODCASTS SECTION
+    ============================== -->
+    <div class="section-header">
+
+    </div>
+
+    <div class="audio-grid">
+
+      <!-- Audio Card 1 -->
+      <div class="audio-card">
+        <div class="audio-thumb-wrap">
+          <img src="../../../assets/images/podcasts/Be the Best Part of Their Day.jpg" alt="Be the Best Part of Their Day" class="audio-thumb" />
+        </div>
+        <div class="audio-info">
+          <p class="audio-title">Be the Best Part of Their Day</p>
+          <p class="audio-host">Thrive LouD with Lou Diamond</p>
+          <audio controls class="audio-player">
+            <source src="../../../assets/audio/Be the Best Part of Their Day.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+      <!-- Audio Card 2 -->
+      <div class="audio-card">
+        <div class="audio-thumb-wrap">
+          <img src="../../../assets/images/podcasts/Leadup Podcast.jpeg" alt="Leadup Podcast" class="audio-thumb" />
+        </div>
+        <div class="audio-info">
+          <p class="audio-title">Leadup Podcast</p>
+          <p class="audio-host">Lead Up Podcast</p>
+          <audio controls class="audio-player">
+            <source src="../../../assets/audio/Leadup Podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+      <!-- Audio Card 3 -->
+      <div class="audio-card">
+        <div class="audio-thumb-wrap">
+          <img src="../../../assets/images/podcasts/Learning the Hard Way the Easy Way.webp" alt="Learning the Hard Way the Easy Way" class="audio-thumb" />
+        </div>
+        <div class="audio-info">
+          <p class="audio-title">Learning the Hard Way the Easy Way</p>
+          <p class="audio-host">with Alex Culley</p>
+          <audio controls class="audio-player">
+            <source src="../../../assets/audio/Learning the Hard Way the Easy Way.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+      <!-- Audio Card 4 -->
+      <div class="audio-card">
+        <div class="audio-thumb-wrap">
+          <img src="../../../assets/images/podcasts/The Executive Leadership Podcast.jpg" alt="The Executive Leadership Podcast" class="audio-thumb" />
+        </div>
+        <div class="audio-info">
+          <p class="audio-title">The Executive Leadership Podcast</p>
+          <p class="audio-host">Executive Leadership Podcast</p>
+          <audio controls class="audio-player">
+            <source src="../../../assets/audio/The Executive Leadership Podcast.mp3" type="audio/mpeg">
+          </audio>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         YOUTUBE / VIDEO SECTION
+    ============================== -->
+    <div class="section-header" style="margin-top: 64px;">
+      <div class="section-rule"></div>
+
+    </div>
+
+    <div class="video-grid">
+
+      <!-- YouTube Card 1 -->
+      <div class="video-card" (click)="openVideo('video1')">
+        <div class="video-thumb-wrap">
+          <img src="../../../assets/images/podcasts/Leading With Inspiration, Gratitude, and Positive Thinking.jpg" alt="Leading With Inspiration, Gratitude, and Positive Thinking" class="video-thumb" />
+          <div class="play-overlay">
+            <div class="play-btn">&#9654;</div>
+          </div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">Leading With Inspiration, Gratitude, and Positive Thinking</p>
+          <p class="video-host">Cyber Business Podcast</p>
+        </div>
+      </div>
+
+      <!-- YouTube Card 2 -->
+      <div class="video-card" (click)="openVideo('video2')">
+        <div class="video-thumb-wrap">
+          <img src="../../../assets/images/podcasts/Leading With Inspiration, Gratitude, and Positive Thinking.jpg" alt="Leading With Inspiration, Gratitude, and Positive Thinking" class="video-thumb" />
+          <div class="play-overlay">
+            <div class="play-btn">&#9654;</div>
+          </div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">Leading With Inspiration, Gratitude, and Positive Thinking</p>
+          <p class="video-host">Cyber Business Podcast</p>
+        </div>
+      </div>
+
+      <!-- YouTube Card 3 -->
+      <div class="video-card" (click)="openVideo('video3')">
+        <div class="video-thumb-wrap">
+          <img src="../../../assets/images/podcasts/Best Part of Their Day.jpg" alt="Best Part of Their Day" class="video-thumb" />
+          <div class="play-overlay">
+            <div class="play-btn">&#9654;</div>
+          </div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">Be the Best Part of Their Day</p>
+          <p class="video-host">Featured Interview</p>
+        </div>
+      </div>
+
+      <!-- YouTube Card 4 -->
+      <div class="video-card" (click)="openVideo('video4')">
+        <div class="video-thumb-wrap">
+          <img src="../../../assets/images/podcasts/From X-ray Tech to CEO.jpg" alt="From X-ray Tech to CEO" class="video-thumb" />
+          <div class="play-overlay">
+            <div class="play-btn">&#9654;</div>
+          </div>
+        </div>
+        <div class="video-info">
+          <p class="video-title">From X-ray Tech to CEO</p>
+          <p class="video-host">Leadership Journey</p>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- ==============================
+         SPOTIFY UNAVAILABLE CARD
+    ============================== -->
+    <div class="section-header" style="margin-top: 64px;">
+      <div class="section-rule"></div>
+    </div>
+
+    <div class="spotify-card" (click)="openSpotify()">
+      <div class="spotify-inner">
+        <p class="spotify-sorry">Sorry, that's not currently available in your region.</p>
+        <p class="spotify-sub">Luckily, lots of other stuff is.</p>
+        <button class="spotify-btn">Discover more</button>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Modal 1 -->
+<div class="video-modal" [class.is-open]="activeModal === 'video1'" (click)="closeVideo()">
+  <div class="video-modal-content" (click)="$event.stopPropagation()">
+    <!-- <button class="modal-close" (click)="closeVideo()">&#10005;</button> -->
+    <div class="modal-iframe-wrap">
+  
+
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/xpTgS7awqRc?si=3rixwVCyszm8yneL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 2 -->
+<div class="video-modal" [class.is-open]="activeModal === 'video2'" (click)="closeVideo()">
+  <div class="video-modal-content" (click)="$event.stopPropagation()">
+    <!-- <button class="modal-close" (click)="closeVideo()">&#10005;</button> -->
+    <div class="modal-iframe-wrap">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/xpTgS7awqRc?si=zP57FJzZfxkZT1Uk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 3 -->
+<div class="video-modal" [class.is-open]="activeModal === 'video3'" (click)="closeVideo()">
+  <div class="video-modal-content" (click)="$event.stopPropagation()">
+    <!-- <button class="modal-close" (click)="closeVideo()">&#10005;</button> -->
+    <div class="modal-iframe-wrap">
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/YI6xcAwEg68?si=GBUtZk71X1RQFwkH" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>
+
+<!-- Modal 4 -->
+<div class="video-modal" [class.is-open]="activeModal === 'video4'" (click)="closeVideo()">
+  <div class="video-modal-content" (click)="$event.stopPropagation()">
+    <!-- <button class="modal-close" (click)="closeVideo()">&#10005;</button> -->
+    <div class="modal-iframe-wrap">
+     <iframe width="560" height="315" src="https://www.youtube.com/embed/Mat5q9PWPuw?si=dDkkiOUJqdahKPYE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    </div>
+  </div>
+</div>

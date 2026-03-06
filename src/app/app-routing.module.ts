@@ -6,6 +6,7 @@ import { SpeakingToComponent } from './home/speaking-to/speaking-to.component';
 import { BookComponent } from './home/book/book.component';
 import { BlogComponent } from './home/blog/blog.component';
 import { BlogWidgetsMainComponent } from './home/blog-widgets-main/blog-widgets-main.component';
+import { PodCastsComponent } from './home/pod-casts/pod-casts.component';
 
 const routes: Routes = [
   {
@@ -35,14 +36,17 @@ const routes: Routes = [
         path: 'book',
         component: BookComponent,
       },
+      {
+        path: 'pod-casts',
+        component: PodCastsComponent,
+      },
 
-      // Blog listing — supports ?page=1, ?page=2, etc.
+
       {
         path: 'blog',
         component: BlogComponent,
       },
 
-      // Individual blog article routes — /home/:slug → BlogWidgetsMainComponent
       { path: '3-ways-to-supercharge-your-employee-reviews',            component: BlogWidgetsMainComponent },
       { path: 'from-good-to-great-ceo-cfo-relationship',                component: BlogWidgetsMainComponent },
       { path: 'principles-and-practices-to-supercharge',                component: BlogWidgetsMainComponent },
