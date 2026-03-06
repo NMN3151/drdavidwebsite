@@ -45,6 +45,9 @@ import { LeadingWithLoveComponent } from './blog-widgets/leading-with-love/leadi
 import { HealthcareIsARightComponent } from './blog-widgets/healthcare-is-a-right/healthcare-is-a-right.component';
 import { NotAllSuperheroesWearCapesComponent } from './blog-widgets/not-all-superheroes-wear-capes/not-all-superheroes-wear-capes.component';
 import { RuralHospitalsStruggleUnderPrivateEquityOwnershipComponent } from './blog-widgets/rural-hospitals-struggle-under-private-equity-ownership/rural-hospitals-struggle-under-private-equity-ownership.component';
+import { PressRoomComponent } from './home/press-room/press-room.component';
+import { ContactComponent } from './home/contact/contact.component';
+import { MeetingRequestComponent } from './home/meeting-request/meeting-request.component';
 
 @NgModule({
   declarations: [
@@ -88,7 +91,11 @@ import { RuralHospitalsStruggleUnderPrivateEquityOwnershipComponent } from './bl
     LeadingWithLoveComponent,
     HealthcareIsARightComponent,
     NotAllSuperheroesWearCapesComponent,
-    RuralHospitalsStruggleUnderPrivateEquityOwnershipComponent
+    RuralHospitalsStruggleUnderPrivateEquityOwnershipComponent,
+    BlogComponent,
+    PressRoomComponent,
+    ContactComponent,
+    MeetingRequestComponent
 
     
   ],

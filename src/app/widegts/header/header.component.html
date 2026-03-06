@@ -39,22 +39,22 @@
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="/home/blog">In The News</a>
             <a class="dropdown-item" routerLink="/home/pod-casts">Pod Casts</a>
-            <a class="dropdown-item" routerLink="/media/press">Press & News</a>
+            <a class="dropdown-item" routerLink="/home/press-room">Press & News</a>
             <a class="dropdown-item" routerLink="/media/gallery">Gallery</a>
           </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/about">About</a>
+          <a class="nav-link" routerLink="/home/about">About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/contact">Contact</a>
+          <a class="nav-link" routerLink="/home/contact">Contact</a>
         </li>
       </ul>
 
       <!-- CTA Button -->
-      <a class="btn-cta" routerLink="/book-dr-schreiner">Book Dr. Schreiner</a>
+      <a class="btn-cta" routerLink="/home/meeting-request">Book Dr. Schreiner</a>
 
       <!-- Mobile Hamburger -->
       <button class="hamburger" (click)="toggleMobileMenu()" [class.active]="mobileMenuOpen" aria-label="Toggle menu">
@@ -101,15 +101,15 @@
       </li>
 
       <li class="mobile-nav-item">
-        <a class="mobile-nav-link" routerLink="/about" (click)="closeMobileMenu()">About</a>
+        <a class="mobile-nav-link" routerLink="/home/about" (click)="closeMobileMenu()">About</a>
       </li>
 
       <li class="mobile-nav-item">
-        <a class="mobile-nav-link" routerLink="/contact" (click)="closeMobileMenu()">Contact</a>
+        <a class="mobile-nav-link" routerLink="/home/contact" (click)="closeMobileMenu()">Contact</a>
       </li>
 
       <li class="mobile-nav-item mobile-cta">
-        <a class="btn-cta-mobile" routerLink="/book-dr-schreiner" (click)="closeMobileMenu()">Book Dr. Schreiner</a>
+        <a class="btn-cta-mobile" routerLink="/home/meeting-request" (click)="closeMobileMenu()">Book Dr. Schreiner</a>
       </li>
     </ul>
   </div>

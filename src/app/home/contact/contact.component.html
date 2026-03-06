@@ -1,0 +1,132 @@
+<div class="contact-section">
+  <div class="contact-container">
+
+    <!-- Header -->
+    <div class="contact-header">
+      <h1 class="contact-main-title">David L. Schreiner, Ph.D.</h1>
+      <span class="contact-subtitle">CONTACT</span>
+    </div>
+
+    <hr class="contact-divider" />
+
+    <!-- Two Column Layout -->
+    <div class="contact-content">
+
+      <!-- Left: Form -->
+      <div class="contact-form-col">
+
+        <div class="contact-info">
+          <p class="contact-info-line">
+            <span class="contact-info-label">E-Mail:</span>
+            <a href="mailto:drdavidsohreiner@gmail.com" class="contact-info-link">drdavidsohreiner&#64;gmail.com</a>
+          </p>
+          <p class="contact-info-line">
+            <span class="contact-info-label">Phone:</span>
+            <span class="contact-info-value">(815) 285-5501</span>
+          </p>
+        </div>
+
+        <p class="contact-required-note">Fields marked with an <span class="contact-asterisk">*</span> are required</p>
+
+        <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" novalidate>
+
+          <!-- First Name -->
+          <div class="form-group">
+            <label class="form-label">First Name <span class="contact-asterisk">*</span></label>
+            <input
+              type="text"
+              class="form-input"
+              [class.input-error]="isFieldInvalid('firstName')"
+              formControlName="firstName"
+              placeholder=""
+            />
+            <span class="form-error" *ngIf="isFieldInvalid('firstName')">First Name is required</span>
+          </div>
+
+          <!-- Last Name -->
+          <div class="form-group">
+            <label class="form-label">Last Name <span class="contact-asterisk">*</span></label>
+            <input
+              type="text"
+              class="form-input"
+              [class.input-error]="isFieldInvalid('lastName')"
+              formControlName="lastName"
+              placeholder=""
+            />
+            <span class="form-error" *ngIf="isFieldInvalid('lastName')">Last Name is required</span>
+          </div>
+
+          <!-- Email -->
+          <div class="form-group">
+            <label class="form-label">Email <span class="contact-asterisk">*</span></label>
+            <input
+              type="email"
+              class="form-input"
+              [class.input-error]="isFieldInvalid('email')"
+              formControlName="email"
+              placeholder=""
+            />
+            <span class="form-error" *ngIf="isFieldInvalid('email') && contactForm.get('email')?.errors?.['required']">Email is required</span>
+            <span class="form-error" *ngIf="isFieldInvalid('email') && contactForm.get('email')?.errors?.['email']">Please enter a valid email</span>
+          </div>
+
+          <!-- Message -->
+          <div class="form-group">
+            <label class="form-label">Message <span class="contact-asterisk">*</span></label>
+            <textarea
+              class="form-textarea"
+              [class.input-error]="isFieldInvalid('message')"
+              formControlName="message"
+              rows="8"
+            ></textarea>
+            <span class="form-error" *ngIf="isFieldInvalid('message')">Message is required</span>
+          </div>
+
+          <button
+            type="submit"
+            class="submit-btn"
+            [disabled]="contactForm.invalid"
+            [class.btn-disabled]="contactForm.invalid"
+          >Submit</button>
+
+        </form>
+
+        <!-- Social Icons -->
+        <div class="social-icons">
+          <a href="https://www.facebook.com/david.schreiner.376" target="_blank" class="social-icon" aria-label="Facebook">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+            </svg>
+          </a>
+          <a href="https://www.linkedin.com" target="_blank" class="social-icon" aria-label="LinkedIn">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+              <rect x="2" y="9" width="4" height="12"/>
+              <circle cx="4" cy="4" r="2"/>
+            </svg>
+          </a>
+          <a href="https://x.com/dlschreiner" target="_blank" class="social-icon" aria-label="X (Twitter)">
+            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Right: Image + Button -->
+      <div class="contact-right-col">
+        <button class="appointment-btn" (click)="goToMeetingRequest()">Set an Appointment</button>
+        <div class="contact-image-wrap">
+          <img
+            src="../../../assets/images/contactpageimage.jpg"
+            alt="David L. Schreiner"
+            class="contact-image"
+          />
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>

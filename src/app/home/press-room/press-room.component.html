@@ -1,0 +1,95 @@
+<div class="press-section">
+  <div class="press-container">
+
+    <!-- Header -->
+    <div class="press-header">
+      <h1 class="press-main-title">David L. Schreiner, Ph.D.</h1>
+      <span class="press-subtitle">THE PRESS ROOM</span>
+    </div>
+
+    <hr class="press-divider" />
+
+    <!-- Contact Information -->
+    <div class="press-block">
+      <h2 class="press-block-title">Contact Information</h2>
+      <p class="press-name">David Schreiner, PhD</p>
+      <a href="mailto:drdavidschreiner@gmail.com" class="press-email">drdavidschreiner&#64;gmail.com</a>
+    </div>
+
+    <hr class="press-divider" />
+
+    <!-- Links to Recent Media Coverage -->
+    <div class="press-block">
+      <h2 class="press-block-title">Links to Recent Media Coverage</h2>
+      <ul class="press-links-list">
+        <li>
+          <a class="press-link" (click)="openPdf('assets/pdfs/KSB President.pdf')" href="javascript:void(0)">
+            KSB President, CEO Write Book on Leadership | By Cody Cutter, Sauk Valley Media
+          </a>
+        </li>
+        <li>
+          <a class="press-link" (click)="openPdf('assets/pdfs/Giving His Best By Cody Cutter Dixon Living Magazine.pdf')" href="javascript:void(0)">
+            Giving His Best | By Cody Cutter, Dixon Living Magazine
+          </a>
+        </li>
+        <li>
+          <a class="press-link" (click)="openExternalLink('https://www.womeninoptometry.com/1-minute-tips/article/no-budget-for-bonuses/')" href="javascript:void(0)">
+            No Budget for Bonuses? | Women in Optometry
+          </a>
+        </li>
+        <li>
+          <a class="press-link" (click)="navigateTo('/home/lessons-from-children-leading-with-authentic-love')" href="javascript:void(0)">
+            Lessons from Children: Leading with Empowering, Authentic Love.
+          </a>
+        </li>
+      </ul>
+    </div>
+
+    <hr class="press-divider" />
+
+    <!-- Downloadable Links -->
+    <div class="press-block">
+      <h2 class="press-block-title">Downloadable Links</h2>
+
+      <div class="download-grid">
+
+        <!-- Headshot -->
+        <div class="download-item">
+          <div class="download-img-wrap">
+            <img src="../../../assets/images/pressroom/pressroom1.jpg" alt="Headshot" class="download-img" />
+          </div>
+          <div class="download-footer">
+            <span class="download-label">Headshot</span>
+            <button class="download-btn" (click)="downloadFile('../../../assets/images/pressroom/pressroom1.jpg', 'Headshot.jpg')">Download</button>
+          </div>
+        </div>
+
+        <!-- Press Kit -->
+        <div class="download-item">
+          <div class="download-img-wrap">
+            <img src="../../../assets/images/pressroom/pressroom2.png" alt="Press Kit" class="download-img" />
+          </div>
+          <div class="download-footer">
+            <span class="download-label">Press Kit</span>
+            <button class="download-btn" (click)="downloadFile('assets/pdfs/Schreiner_Press-Kit.pdf', 'Schreiner_Press-Kit.pdf')">Download</button>
+          </div>
+        </div>
+
+        <!-- Book Cover -->
+        <div class="download-item">
+          <div class="download-img-wrap">
+            <img src="../../../assets/images/pressroom/pressroom3.jpg" alt="Book Cover" class="download-img" />
+          </div>
+          <div class="download-footer">
+            <span class="download-label">Book Cover</span>
+            <button class="download-btn" (click)="downloadFile('../../../assets/images/pressroom/pressroom3.jpg', 'Book-Cover.jpg')">Download</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<app-books-in-the-news></app-books-in-the-news>

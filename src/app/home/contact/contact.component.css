@@ -1,0 +1,322 @@
+/* ========================================
+   Contact Section
+   ======================================== */
+
+.contact-section {
+  width: 100%;
+  background-color: var(--background-light, #F3F4F6);
+  padding: 48px 0 80px;
+  margin-top: 70px;
+}
+
+.contact-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 48px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ========================================
+   Header
+   ======================================== */
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 28px;
+}
+
+.contact-main-title {
+  font-family: var(--heading-font-family, 'Nanum Myeongjo', serif);
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--primary-dark, #0B0F1A);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.contact-subtitle {
+  font-family: var(--header-font-family, 'Inter', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--accent-red, #C62828);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+/* ========================================
+   Divider
+   ======================================== */
+
+.contact-divider {
+  border: none;
+  border-top: 1px solid #D1D5DB;
+  margin: 0 0 40px;
+}
+
+/* ========================================
+   Two Column Layout
+   ======================================== */
+
+.contact-content {
+  display: grid;
+  grid-template-columns: 1fr 420px;
+  gap: 72px;
+  align-items: flex-start;
+}
+
+/* ========================================
+   Left — Contact Info + Form
+   ======================================== */
+
+.contact-form-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.contact-info-line {
+  font-family: var(--header-font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  color: var(--primary-dark, #0B0F1A);
+  margin: 0;
+}
+
+.contact-info-label {
+  font-weight: 600;
+  margin-right: 4px;
+}
+
+.contact-info-link {
+  color: #2563EB;
+  text-decoration: none;
+}
+
+.contact-info-link:hover {
+  text-decoration: underline;
+}
+
+.contact-info-value {
+  font-weight: 400;
+  color: #374151;
+}
+
+.contact-required-note {
+  font-family: var(--header-font-family, 'Inter', sans-serif);
+  font-size: 13px;
+  color: #6B7280;
+  margin: 0;
+}
+
+.contact-asterisk {
+  color: var(--accent-red, #C62828);
+  font-weight: 700;
+}
+
+/* ========================================
+   Form Fields
+   ======================================== */
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-label {
+  font-family: var(--header-font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--primary-dark, #0B0F1A);
+}
+
+.form-input,
+.form-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  font-family: var(--header-font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  color: #111827;
+  background-color: #FFFFFF;
+  border: 1px solid #D1D5DB;
+  border-radius: 3px;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  resize: none;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: #6B7280;
+  box-shadow: 0 0 0 2px rgba(107, 114, 128, 0.15);
+}
+
+.input-error {
+  border-color: var(--accent-red, #C62828) !important;
+  box-shadow: 0 0 0 2px rgba(198, 40, 40, 0.12) !important;
+}
+
+.form-textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+.form-error {
+  font-family: var(--header-font-family, 'Inter', sans-serif);
+  font-size: 12px;
+  color: var(--accent-red, #C62828);
+  margin-top: 2px;
+}
+
+/* ========================================
+   Submit Button
+   ======================================== */
+
+.submit-btn {
+  display: inline-block;
+  width: fit-content;
+  padding: 10px 24px;
+  background-color: var(--dark-grey, #374151);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 4px;
+  font-family: var(--header-font-family, 'Inter', sans-serif);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  margin-top: 4px;
+}
+
+.submit-btn:hover:not(:disabled) {
+  background-color: #1F2937;
+}
+
+.btn-disabled,
+.submit-btn:disabled {
+  background-color: #9CA3AF;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+/* ========================================
+   Social Icons
+   ======================================== */
+
+.social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+  margin-top: 12px;
+}
+
+.social-icon {
+  color: var(--primary-dark, #0B0F1A);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  transition: color 0.15s ease;
+}
+
+.social-icon:hover {
+  color: var(--accent-red, #C62828);
+}
+
+/* ========================================
+   Right — Image + Appointment Button
+   ======================================== */
+
+.contact-right-col {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.appointment-btn {
+  padding: 12px 28px;
+  background-color: var(--accent-red, #C62828);
+  color: #FFFFFF;
+  border: none;
+  border-radius: 24px;
+  font-family: var(--header-font-family, 'Inter', sans-serif);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  letter-spacing: 0.01em;
+}
+
+.appointment-btn:hover {
+  background-color: var(--accent-red-dark, #A61B1B);
+}
+
+.contact-image-wrap {
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.contact-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+}
+
+/* ========================================
+   Mobile View — 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .contact-section {
+    padding: 32px 0 52px;
+  }
+
+  .contact-container {
+    padding: 0 18px;
+  }
+
+  .contact-main-title {
+    font-size: 22px;
+  }
+
+  .contact-content {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+
+  /* On mobile, image+button moves below the form */
+  .contact-right-col {
+    order: -1;
+  }
+
+  .appointment-btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact-divider {
+    margin: 0 0 28px;
+  }
+
+  .form-input,
+  .form-textarea {
+    font-size: 13px;
+  }
+}
