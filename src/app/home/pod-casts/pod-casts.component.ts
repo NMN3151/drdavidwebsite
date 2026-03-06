@@ -19,7 +19,7 @@ export class PodCastsComponent {
     document.body.style.overflow = '';
   }
 
-  openSpotify(): void {
-    window.open('https://open.spotify.com/search', '_blank');
+  openSpotify(link: string): void {
+    window.open(link, '_blank');
   }
 }

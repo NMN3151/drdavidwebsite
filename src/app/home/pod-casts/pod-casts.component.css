@@ -1,4 +1,6 @@
- 
+/* ========================================
+   Podcasts Section
+   ======================================== */
 
 .podcasts-section {
   width: 100%;
@@ -198,18 +200,28 @@
 }
 
 /* ========================================
-   Spotify Card — matches image 3 style
+   Spotify Grid + Card — matches image 3 style
    ======================================== */
+
+.spotify-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2px;
+  border-radius: 8px;
+  overflow: hidden;
+}
 
 .spotify-card {
   background-color: #121212;
-  border-radius: 8px;
-  padding: 48px 24px;
+  padding: 40px 24px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   transition: background-color 0.2s ease;
+  border-bottom: 1px solid #2a2a2a;
+  margin: 10px 0px;
+   border-radius: 8px;
 }
 
 .spotify-card:hover {
