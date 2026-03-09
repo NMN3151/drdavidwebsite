@@ -139,7 +139,6 @@
   align-items: center;
   justify-content: center;
   padding: 11px 24px;
-  background-color: var(--pure-white);
   color: var(--primary-dark);
   font-family: var(--heading-font-family);
   font-size: 13.5px;
@@ -153,11 +152,10 @@
 }
 
 .btn-primary:hover {
-  background-color: var(--accent-gold);
+  background-color: rgb(255, 255, 255);
   border-color: var(--accent-gold);
-  color: var(--primary-dark);
   transform: translateY(-1px);
-  box-shadow: 0 6px 20px rgba(198, 168, 94, 0.35);
+  color:var(--accent-red);
 }
 
 .btn-watch {

@@ -50,6 +50,7 @@ import { ContactComponent } from './home/contact/contact.component';
 import { MeetingRequestComponent } from './home/meeting-request/meeting-request.component';
 import { PodCastsComponent } from './home/pod-casts/pod-casts.component';
 import { AboutComponent } from './home/about/about.component';
+import { StarRatingComponent } from './widegts/star-rating/star-rating.component';
 
 @NgModule({
   declarations: [
@@ -99,7 +100,8 @@ import { AboutComponent } from './home/about/about.component';
     ContactComponent,
     MeetingRequestComponent,
    PodCastsComponent,
-   AboutComponent
+   AboutComponent,
+   StarRatingComponent
 
     
   ],

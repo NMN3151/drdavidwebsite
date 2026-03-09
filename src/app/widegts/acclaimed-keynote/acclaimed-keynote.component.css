@@ -4,7 +4,6 @@
 
 .keynote-section {
   width: 100%;
-  background-color: #ffffff;
   padding: 72px 48px 80px;
 }
 
@@ -177,7 +176,6 @@
   display: flex;
   flex-direction: column;
   gap: 14px;
-  background-color: #ffffff;
 }
 
 .testimonial-quote {

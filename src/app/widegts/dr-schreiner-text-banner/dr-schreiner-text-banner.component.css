@@ -4,7 +4,6 @@
 
 .banner-section {
   width: 100%;
-  background-color: #ffffff;
   padding: 64px 48px 72px;
   margin-top:50px;
 }
@@ -108,8 +107,10 @@
 }
 
 .btn-outline:hover {
-  border-color: #1a1a1a;
-  background-color: #f9fafb;
+   background-color: rgb(255, 255, 255);
+  border-color: var(--accent-gold);
+  transform: translateY(-1px);
+  color:var(--accent-red);
 }
 
 .btn-solid {

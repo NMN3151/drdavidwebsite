@@ -149,7 +149,7 @@
   align-items: center;
   justify-content: center;
   padding: 14px 28px;
-  border-radius: 50px;
+  border-radius: 10px;
   font-family: var(--inria-serif-font-family);
   font-size: 15px;
   font-weight: 600;
@@ -181,7 +181,6 @@
 
 /* Light outline-filled button */
 .baot-btn-light {
-  background-color: #ffffff;
   color: var(--primary-dark, #0B0F1A);
   border: 1.5px solid #d1d5db;
 }

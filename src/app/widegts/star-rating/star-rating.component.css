@@ -1,0 +1,166 @@
+ 
+
+.reviews-section {
+  width: 100%;
+  padding: 72px 48px;
+}
+
+.reviews-container {
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+/* ========================================
+   Two Column Grid
+   ======================================== */
+
+.reviews-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 64px;
+  align-items: start;
+}
+
+.reviews-col {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+/* ========================================
+   Individual Review Card
+   ======================================== */
+
+.review-card {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 32px 0;
+  border-bottom: 1px solid #e0e0dc;
+}
+
+.review-card:last-child {
+  border-bottom: none;
+}
+
+/* ========================================
+   Stars
+   ======================================== */
+
+.stars {
+  display: flex;
+  gap: 4px;
+}
+
+.stars span {
+  font-size: 28px;
+  color: #F5A623;
+  line-height: 1;
+}
+
+/* ========================================
+   Review Text
+   ======================================== */
+
+.review-text {
+  font-family: var(--inria-serif-font-family);
+  font-size: 18px;
+  font-weight: 400;
+  color: #333333;
+  line-height: 1.75;
+  margin: 0;
+}
+
+.review-text strong {
+  font-weight: 700;
+  color: #1a1a1a;
+}
+
+/* ========================================
+   Author
+   ======================================== */
+
+.review-author {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.author-name {
+  font-family: var(--inria-serif-font-family);
+  font-size: 15px;
+  font-weight: 700;
+  font-style: italic;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.author-title {
+  font-family: 'Georgia', 'Times New Roman', serif;
+  font-size: 14px;
+  font-weight: 400;
+  font-style: italic;
+  color: #555555;
+  margin: 0;
+}
+
+/* ========================================
+   Responsive - Tablet
+   ======================================== */
+
+@media (max-width: 768px) {
+  .reviews-section {
+    padding: 52px 32px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .reviews-col:first-child .review-card:last-child {
+    border-bottom: 1px solid #e0e0dc;
+  }
+}
+
+/* ========================================
+   Responsive - Mobile 480px
+   ======================================== */
+
+@media (max-width: 480px) {
+  .reviews-section {
+    padding: 40px 20px;
+  }
+
+  .reviews-grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .stars span {
+    font-size: 22px;
+  }
+
+  .review-card {
+    padding: 24px 0;
+    gap: 10px;
+  }
+
+  .review-text {
+    font-size: 13.5px;
+    line-height: 1.7;
+  }
+
+  .author-name {
+    font-size: 13.5px;
+  }
+
+  .author-title {
+    font-size: 13px;
+  }
+
+  .reviews-col:first-child .review-card:last-child {
+    border-bottom: 1px solid #e0e0dc;
+  }
+}

@@ -4,7 +4,6 @@
 
 .meeting-section {
   width: 100%;
-  background-color: var(--background-light, #F3F4F6);
   padding: 48px 0 80px;
   margin-top: 70px;
 }
@@ -124,7 +123,6 @@ font-family: var(--inria-serif-font-family);
   font-family: var(--header-font-family, 'Inter', sans-serif);
   font-size: 14px;
   color: #111827;
-  background-color: #FFFFFF;
   border: 1px solid #D1D5DB;
   border-radius: 3px;
   outline: none;
@@ -170,7 +168,7 @@ font-family: var(--inria-serif-font-family);
   background-color: var(--dark-grey, #374151);
   color: #FFFFFF;
   border: none;
-  border-radius: 4px;
+  border-radius: 10px;
   font-family: var(--inria-serif-font-family);
   font-size: 18px;
   font-weight: 500;

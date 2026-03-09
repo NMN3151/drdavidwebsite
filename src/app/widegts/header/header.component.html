@@ -15,7 +15,6 @@
           <a class="nav-link" routerLink="/speaking">Speaking <span class="chevron">&#8964;</span></a>
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="/home/speaking-to">Speaking</a>
-            <a class="dropdown-item" routerLink="/speaking/workshops">Workshops</a>
             <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf')">Speaker Kit</a>
             <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf')">Leadership Tree Template</a>
           </div>
@@ -64,7 +63,6 @@
         </div>
         <div class="mobile-dropdown" [class.open]="mobileDropdown === 'speaking'">
           <a class="mobile-dropdown-item" routerLink="/home/speaking-to" (click)="closeMobileMenu()">Speaking</a>
-          <a class="mobile-dropdown-item" routerLink="/speaking/workshops" (click)="closeMobileMenu()">Workshops</a>
           <a class="mobile-dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf'); closeMobileMenu()">Speaker Kit</a>
           <a class="mobile-dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf'); closeMobileMenu()">Leadership Tree Template</a>
         </div>

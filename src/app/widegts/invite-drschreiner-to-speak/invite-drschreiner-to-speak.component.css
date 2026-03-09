@@ -4,7 +4,6 @@
 
 .invite-section {
   width: 100%;
-  background-color: #ffffff;
   padding: 80px 48px;
 }
 
@@ -118,7 +117,6 @@
   padding: 0 14px;
   border: 1px solid #d1d5db;
   border-radius: 6px;
-  background-color: #ffffff;
   font-family: var(--inria-serif-font-family);
   font-size: 13.5px;
   font-weight: 400;

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home-hero-banner',
@@ -7,4 +8,11 @@ import { Component } from '@angular/core';
 })
 export class HomeHeroBannerComponent {
 
+
+  constructor(private route:Router){}
+
+  routetospeakingtopage(){
+    this.route.navigate(['/home/speaking-to'])
+
+  }
 }
