@@ -88,17 +88,16 @@
 }
 
 .bsr-review-text {
-  font-family: var(--inria-serif-font-family, 'Georgia', serif);
-  font-size: 15.5px;
+ font-family: var(--inria-serif-font-family);
+  font-size: 20px;
   font-weight: 400;
-  color: #333333;
-  line-height: 1.75;
+  color: var(--dark-grey);
   margin: 0;
 }
 
 .bsr-review-author {
-  font-family: var(--inria-serif-font-family, 'Georgia', serif);
-  font-size: 14px;
+font-family: var(--newsreader-font-family);
+  font-size: 18px;
   font-weight: 700;
   color: var(--primary-dark, #0B0F1A);
   font-style: italic;

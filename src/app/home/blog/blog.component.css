@@ -131,7 +131,7 @@
 }
 
 .blog-article-excerpt {
-  font-family: var(--font-primary, 'Nanum Myeongjo', serif);
+  font-family: var(--inria-serif-font-family);
   font-size: 20px;
   font-weight: 400;
   color: #555555;

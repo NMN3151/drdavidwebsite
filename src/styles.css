@@ -95,7 +95,7 @@ body {
      Font
      ======================================== */
 
-  --font-primary: 'Nanum Myeongjo', 'Georgia', 'Times New Roman', serif;
+  --font-primary: 'Inria Serif', serif;
   --header-font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
   --heading-font-family: 'Nanum Myeongjo', serif;
   --newsreader-font-family: 'Newsreader', serif;

@@ -1,7 +1,11 @@
 /* ========================================
    Newsletter Strip
    ======================================== */
-
+.footer-nav-wrapper{
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
 .newsletter-strip {
   width: 100%;
   background-color: #f3f3f1;
@@ -274,50 +278,17 @@
   text-align: center;
 }
 
-/* ========================================
-   Responsive - Tablet
-   ======================================== */
-
-@media (max-width: 960px) {
-  .newsletter-strip {
-    padding: 28px 32px;
-  }
-
-  .footer {
-    padding: 40px 32px 24px;
-  }
-
-  .footer-main {
-    flex-wrap: wrap;
-    gap: 36px;
-  }
-
-  .footer-brand {
-    flex: 1 1 100%;             /* full width on tablet */
-    max-width: 100%;
-  }
-
-  .footer-nav {
-    flex: 1 1 auto;
-    margin-bottom: 0;
-  }
-
-  .footer-sponsors {
-    flex: 1 1 100%;             /* full width on tablet */
-  }
-}
+ 
 
 /* ========================================
    Responsive - Mobile
    ======================================== */
 
  
-
 @media (max-width: 600px) {
   .newsletter-heading {
-  font-size: 24px;
-}
-
+    font-size: 24px;
+  }
 
   .newsletter-strip {
     padding: 24px 20px;
@@ -352,57 +323,69 @@
   .footer {
     padding: 36px 20px 20px;
   }
- 
+
+  .footer-main {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    align-items: center;
+  }
 
   .footer-brand {
     flex: none;
     width: 100%;
     max-width: 100%;
+    align-items: center;
+    text-align: center;
   }
 
-  /* ← nav columns side by side on mobile */
-  .footer-nav {
-    flex: none;
-    width: 100%;
-    margin-bottom: 0;
+  .footer-tagline {
+    text-align: center;
+    max-width: 100%;
   }
 
-  /* put both nav columns in a row */
-  .footer-main .footer-nav:nth-child(2),
-  .footer-main .footer-nav:nth-child(3) {
-    display: inline-flex;
-    width: auto;
-  }
-
-  /* wrapper trick: nav columns sit side by side */
-  .footer-main {
+  /* Nav two columns side by side, centered */
+  .footer-nav-wrapper {
     display: flex;
     flex-direction: row;
-    gap: 24px;
+    justify-content: center;
+    gap: 48px;
+    width: 100%;
+  }
+
+  .footer-nav {
+    flex: none;
+    width: auto;
+    margin-bottom: 0;
+    align-items: flex-start;
   }
 
   .footer-nav-list {
-    gap: 12px;
+    gap: 14px;
   }
 
   .footer-nav-link {
     font-size: 15px;
-    text-align: left;          /* ← force left alignment */
+    text-align: left;
   }
 
   .footer-sponsors {
     flex: none;
     width: 100%;
-    align-items: flex-start;
+    align-items: center;
   }
 
   .sponsors-row {
     gap: 16px;
-    justify-content: flex-start; /* ← logos left aligned */
+    justify-content: center;
   }
 
   .sponsor-logo {
     height: 24px;
     max-width: 80px;
+  }
+
+  .footer-bottom {
+    justify-content: center;
   }
 }

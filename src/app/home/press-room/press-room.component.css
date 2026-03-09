@@ -89,7 +89,7 @@
 
 .press-email {
   font-family: var(--header-font-family, 'Inter', sans-serif);
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 400;
   color: #2563EB;
   text-decoration: none;
@@ -114,8 +114,8 @@
 }
 
 .press-link {
-  font-family: var(--header-font-family, 'Inter', sans-serif);
-  font-size: 14px;
+ font-family: var(--inria-serif-font-family);
+  font-size: 18px;
   font-weight: 400;
   color: #2563EB;
   text-decoration: none;
@@ -163,9 +163,10 @@
 }
 
 .download-footer {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+ display: flex;
+    align-items: center;
+    gap: 12px;
+    justify-content: space-evenly;
 }
 
 .download-label {
