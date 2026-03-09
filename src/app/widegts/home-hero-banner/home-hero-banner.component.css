@@ -135,6 +135,7 @@
 }
 
 .btn-primary {
+  background-color: var(--pure-white);
   display: inline-flex;
   align-items: center;
   justify-content: center;
