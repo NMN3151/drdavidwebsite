@@ -4,51 +4,20 @@
   [class.menu-open]="mobileMenuOpen"
 >
   <div class="navbar-container">
-    <!-- Logo -->
     <a class="navbar-logo" routerLink="/">
       <img src="../../../assets/images/mainlogo.png" alt="Dr. Schreiner Logo" />
     </a>
 
-    <!-- Right Side: Desktop Nav + CTA + Hamburger -->
     <div class="navbar-right">
-      <!-- Desktop Nav -->
       <ul class="nav-links">
-        <!-- Speaking Dropdown -->
-        <li
-          class="nav-item dropdown"
-          [class.open]="activeDropdown === 'speaking'"
-          (mouseenter)="openDropdown('speaking')"
-          (mouseleave)="closeDropdown()"
-        >
-          <a class="nav-link" routerLink="/speaking">
-            Speaking <span class="chevron">&#8964;</span>
-          </a>
+
+        <li class="nav-item dropdown" [class.open]="activeDropdown === 'speaking'" (mouseenter)="openDropdown('speaking')" (mouseleave)="closeDropdown()">
+          <a class="nav-link" routerLink="/speaking">Speaking <span class="chevron">&#8964;</span></a>
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="/home/speaking-to">Speaking</a>
-            <a class="dropdown-item" routerLink="/speaking/workshops"
-              >Workshops</a
-            >
-            <a
-              class="dropdown-item"
-              href="javascript:void(0)"
-              (click)="
-                downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf')
-              "
-            >
-              Speaker Kit
-            </a>
-            <a
-              class="dropdown-item"
-              href="javascript:void(0)"
-              (click)="
-                downloadFile(
-                  'assets/pdfs/Leadership Tree Template.pdf',
-                  'Leadership Tree Template.pdf'
-                )
-              "
-            >
-              Leadership Tree Template
-            </a>
+            <a class="dropdown-item" routerLink="/speaking/workshops">Workshops</a>
+            <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf')">Speaker Kit</a>
+            <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf')">Leadership Tree Template</a>
           </div>
         </li>
 
@@ -56,22 +25,12 @@
           <a class="nav-link" routerLink="/home/book">Book</a>
         </li>
 
-        <!-- Media Dropdown -->
-        <li
-          class="nav-item dropdown"
-          [class.open]="activeDropdown === 'media'"
-          (mouseenter)="openDropdown('media')"
-          (mouseleave)="closeDropdown()"
-        >
-          <a class="nav-link" routerLink="/media">
-            Media <span class="chevron">&#8964;</span>
-          </a>
+        <li class="nav-item dropdown" [class.open]="activeDropdown === 'media'" (mouseenter)="openDropdown('media')" (mouseleave)="closeDropdown()">
+          <a class="nav-link" routerLink="/media">Media <span class="chevron">&#8964;</span></a>
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="/home/blog">In The News</a>
             <a class="dropdown-item" routerLink="/home/pod-casts">Pod Casts</a>
-            <a class="dropdown-item" routerLink="/home/press-room"
-              >Press</a
-            >
+            <a class="dropdown-item" routerLink="/home/press-room">Press</a>
           </div>
         </li>
 
@@ -82,20 +41,12 @@
         <li class="nav-item">
           <a class="nav-link" routerLink="/home/contact">Contact</a>
         </li>
+
       </ul>
 
-      <!-- CTA Button -->
-      <a class="btn-cta" routerLink="/home/meeting-request"
-        >Book Dr. Schreiner</a
-      >
+      <a class="btn-cta" routerLink="/home/meeting-request">Book Dr. Schreiner</a>
 
-      <!-- Mobile Hamburger -->
-      <button
-        class="hamburger"
-        (click)="toggleMobileMenu()"
-        [class.active]="mobileMenuOpen"
-        aria-label="Toggle menu"
-      >
+      <button class="hamburger" (click)="toggleMobileMenu()" [class.active]="mobileMenuOpen" aria-label="Toggle menu">
         <span></span>
         <span></span>
         <span></span>
@@ -103,119 +54,51 @@
     </div>
   </div>
 
-  <!-- Mobile Menu -->
   <div class="mobile-menu" [class.open]="mobileMenuOpen">
     <ul class="mobile-nav-links">
+
       <li class="mobile-nav-item">
-        <div
-          class="mobile-nav-header"
-          (click)="toggleMobileDropdown('speaking')"
-        >
-          <a class="mobile-nav-link">Speaking</a>
-          <span
-            class="mobile-chevron"
-            [class.rotated]="mobileDropdown === 'speaking'"
-            >&#8964;</span
-          >
+        <div class="mobile-nav-header" (click)="toggleMobileDropdown('speaking')">
+          <span class="mobile-nav-link">Speaking</span>
+          <span class="mobile-chevron" [class.rotated]="mobileDropdown === 'speaking'">&#8964;</span>
         </div>
-        <div
-          class="mobile-dropdown"
-          [class.open]="mobileDropdown === 'speaking'"
-        >
-          <a
-            class="mobile-dropdown-item"
-            routerLink="/home/speaking-to"
-            (click)="closeMobileMenu()"
-            >Speaking</a
-          >
-          <a
-            class="mobile-dropdown-item"
-            routerLink="/speaking/workshops"
-            (click)="closeMobileMenu()"
-            >Workshops</a
-          >
-          <a
-            class="mobile-dropdown-item"
-            routerLink="/speaking/virtual"
-            (click)="closeMobileMenu()"
-            >Virtual Sessions</a
-          >
-          <a
-            class="mobile-dropdown-item"
-            routerLink="/speaking/topics"
-            (click)="closeMobileMenu()"
-            >Speaking Topics</a
-          >
+        <div class="mobile-dropdown" [class.open]="mobileDropdown === 'speaking'">
+          <a class="mobile-dropdown-item" routerLink="/home/speaking-to" (click)="closeMobileMenu()">Speaking</a>
+          <a class="mobile-dropdown-item" routerLink="/speaking/workshops" (click)="closeMobileMenu()">Workshops</a>
+          <a class="mobile-dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf'); closeMobileMenu()">Speaker Kit</a>
+          <a class="mobile-dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf'); closeMobileMenu()">Leadership Tree Template</a>
         </div>
       </li>
 
       <li class="mobile-nav-item">
-        <a
-          class="mobile-nav-link"
-          routerLink="/book"
-          (click)="closeMobileMenu()"
-          >Book</a
-        >
+        <a class="mobile-nav-link" routerLink="/home/book" (click)="closeMobileMenu()">Book</a>
       </li>
 
       <li class="mobile-nav-item">
         <div class="mobile-nav-header" (click)="toggleMobileDropdown('media')">
-          <a class="mobile-nav-link">Media</a>
-          <span
-            class="mobile-chevron"
-            [class.rotated]="mobileDropdown === 'media'"
-            >&#8964;</span
-          >
+          <span class="mobile-nav-link">Media</span>
+          <span class="mobile-chevron" [class.rotated]="mobileDropdown === 'media'">&#8964;</span>
         </div>
         <div class="mobile-dropdown" [class.open]="mobileDropdown === 'media'">
-          <a
-            class="mobile-dropdown-item"
-            routerLink="/media/podcast"
-            (click)="closeMobileMenu()"
-            >Podcast</a
-          >
-          <a
-            class="mobile-dropdown-item"
-            routerLink="/media/videos"
-            (click)="closeMobileMenu()"
-            >Videos</a
-          >
-          <a
-            class="mobile-dropdown-item"
-            routerLink="/media/press"
-            (click)="closeMobileMenu()"
-            >Press</a
-          >
-           
+          <a class="mobile-dropdown-item" routerLink="/home/blog" (click)="closeMobileMenu()">In The News</a>
+          <a class="mobile-dropdown-item" routerLink="/home/pod-casts" (click)="closeMobileMenu()">Pod Casts</a>
+          <a class="mobile-dropdown-item" routerLink="/home/press-room" (click)="closeMobileMenu()">Press</a>
         </div>
       </li>
 
       <li class="mobile-nav-item">
-        <a
-          class="mobile-nav-link"
-          routerLink="/home/about"
-          (click)="closeMobileMenu()"
-          >About</a
-        >
+        <a class="mobile-nav-link" routerLink="/home/about" (click)="closeMobileMenu()">About</a>
       </li>
 
       <li class="mobile-nav-item">
-        <a
-          class="mobile-nav-link"
-          routerLink="/home/contact"
-          (click)="closeMobileMenu()"
-          >Contact</a
-        >
+        <a class="mobile-nav-link" routerLink="/home/contact" (click)="closeMobileMenu()">Contact</a>
       </li>
 
       <li class="mobile-nav-item mobile-cta">
-        <a
-          class="btn-cta-mobile"
-          routerLink="/home/meeting-request"
-          (click)="closeMobileMenu()"
-          >Book Dr. Schreiner</a
-        >
+        <a class="btn-cta-mobile" routerLink="/home/meeting-request" (click)="closeMobileMenu()">Book Dr. Schreiner</a>
       </li>
+
     </ul>
   </div>
+
 </nav>

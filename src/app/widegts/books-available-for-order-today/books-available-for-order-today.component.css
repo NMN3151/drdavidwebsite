@@ -221,9 +221,17 @@
    ======================================== */
 
 @media (max-width: 480px) {
+
+  .flex-wrapper {
+  flex-direction: column;
+}
+
+
+
+
 .contact-header {
       
-    margin-top: 0px;
+    margin-top: 20px;
 }
  
   .contact-main-title {
