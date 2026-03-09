@@ -210,7 +210,8 @@
   }
 
   .keynote-heading {
-    font-size: 26px;
+    font-size: 28px;
+    text-align: center;
   }
 
   .keynote-content {
@@ -231,7 +232,7 @@
   .keynote-text,
   .keynote-outcome-item,
   .keynote-customized {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .btn-download {
@@ -252,7 +253,7 @@
   }
 
   .testimonial-quote {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .testimonial-author {

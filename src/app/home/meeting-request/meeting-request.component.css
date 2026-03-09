@@ -195,6 +195,17 @@ font-family: var(--inria-serif-font-family);
    ======================================== */
 
 @media (max-width: 480px) {
+
+  
+ 
+
+
+  .meeting-intro ,.meeting-required-note ,.form-label{
+  font-size: 14px;
+}
+
+
+
   .meeting-section {
     padding: 32px 0 52px;
   }

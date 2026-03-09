@@ -12,7 +12,7 @@
   max-width: 1600px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: 400px 1fr 1fr;
+  grid-template-columns: 500px 1fr 1fr;
   gap: 20px;
   align-items: flex-start;
 }
@@ -54,7 +54,7 @@
 
 .bins-news-link {
 font-family: var(--inria-serif-font-family);
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 400;
   color: var(--primary-dark, #0B0F1A);
   text-decoration: none;
@@ -186,7 +186,7 @@ font-family: var(--newsreader-font-family);
   }
 
   .bins-news-link {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .bins-news-item {
@@ -207,7 +207,7 @@ font-family: var(--newsreader-font-family);
   }
 
   .bins-card-desc {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .bins-btn-outline {

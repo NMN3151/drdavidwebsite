@@ -126,10 +126,11 @@
   
 .partner-heading {
   text-align: center;
+  font-size: 28px;
 }
 
   .partner-section {
-    padding: 48px 20px 60px;
+    padding: 20px  60px;
   }
 
   .partner-container {

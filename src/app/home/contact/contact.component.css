@@ -298,6 +298,18 @@ display: inline-block;
    ======================================== */
 
 @media (max-width: 480px) {
+
+ 
+.contact-required-note {
+  font-size: 14px;
+
+}
+
+  .form-label {
+  font-size: 14px;
+}
+
+
   .contact-section {
     padding: 32px 0 52px;
   }

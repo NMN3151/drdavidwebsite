@@ -221,8 +221,19 @@
    ======================================== */
 
 @media (max-width: 480px) {
+.contact-header {
+      
+    margin-top: 0px;
+}
+ 
+  .contact-main-title {
+  font-size: 20px;
+}
+
+
+
   .baot-section {
-    padding: 40px 20px 52px;
+    padding: 1px 20px 52px;
   }
 
   .baot-container {
@@ -245,7 +256,7 @@
   }
 
   .baot-list-item {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .baot-btn-row {

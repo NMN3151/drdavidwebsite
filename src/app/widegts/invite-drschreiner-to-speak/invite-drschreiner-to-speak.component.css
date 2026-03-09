@@ -281,11 +281,12 @@
   }
 
   .invite-heading {
-    font-size: 24px;
+    font-size: 28px;
+    text-align: center;
   }
 
   .invite-subtext {
-    font-size: 13.5px;
+    font-size: 14px;
   }
 
   .form-grid {
@@ -298,7 +299,7 @@
   }
 
   .form-label {
-    font-size: 12.5px;
+    font-size: 14px;
   }
 
   .form-input {

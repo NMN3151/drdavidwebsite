@@ -219,10 +219,14 @@
 
 @media (max-width: 480px) {
 
-  
+  .why-testimonial-text {
+  font-size: 14px;
+ 
+}
 .why-heading {
   
   text-align: center;
+  font-size: 28px;
 }
 
   .why-section {
