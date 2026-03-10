@@ -13,24 +13,15 @@ import { ContactComponent } from './home/contact/contact.component';
 import { MeetingRequestComponent } from './home/meeting-request/meeting-request.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    redirectTo: '/home/dashboard',
-    pathMatch: 'full',
-  },
+ 
 
   {
-    path: 'home',
+    path: '',
     component: MainHomeComponent,
     children: [
       {
         path: '',
-        redirectTo: 'dashboard',
-        pathMatch: 'full',
-      },
-      {
-        path: 'dashboard',
-        component: DashboardComponent,
+        component: DashboardComponent
       },
       {
         path: 'speaking-to',
@@ -98,8 +89,8 @@ const routes: Routes = [
 
   {
     path: '**',
-    redirectTo: '/home/dashboard',
-  },
+    redirectTo: ''
+  }
 ];
 
 @NgModule({

@@ -11,9 +11,9 @@
           </a>
         </li>
       </ul>
-      <div class="bins-news-cta">
-        <button class="bins-btn-outline" (click)="viewAllNews()">View All</button>
-      </div>
+      <div class="bins-news-cta" *ngIf="!isOnBlogPage">
+  <button class="bins-btn-outline" (click)="viewAllNews()">View All</button>
+</div>
     </div>
 
     <!-- Center: Book -->

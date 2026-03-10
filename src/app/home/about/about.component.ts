@@ -13,10 +13,10 @@ ngOnInit(): void {
     window.scrollTo({ top: 0, behavior: 'smooth'});
   }
   goToBook(): void {
-    this.router.navigate(['/home/book']);
+    this.router.navigate(['/book']);
   }
 
   goToContact(): void {
-    this.router.navigate(['/home/contact']);
+    this.router.navigate(['/contact']);
   }
 }

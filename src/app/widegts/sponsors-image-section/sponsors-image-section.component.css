@@ -77,7 +77,7 @@ display: flex;
 
 @media (max-width: 480px) {
   .sponsors {
-    padding: 36px 0;
+    padding: 0px 0px;
   }
 
   .sponsors-container {
@@ -98,7 +98,7 @@ display: flex;
   }
 
   .sponsor-logo {
-    max-height: 32px;
+    max-height: 50px;
     max-width: 90px;
   }
 

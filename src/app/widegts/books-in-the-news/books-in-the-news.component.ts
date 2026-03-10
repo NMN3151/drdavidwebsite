@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 interface NewsArticle {
   title: string;
@@ -35,6 +36,12 @@ export class BooksInTheNewsComponent {
     }
   ];
 
+  constructor(private router: Router) {}
+
+  get isOnBlogPage(): boolean {
+    return this.router.url.includes('/blog');
+  }
+
   orderBook(): void {
     window.open(
       'https://www.amazon.com/Best-Part-Their-Supercharging-Communication/dp/1642257605',
@@ -52,7 +59,6 @@ export class BooksInTheNewsComponent {
   }
 
   viewAllNews(): void {
-    // Route to news listing page — update path as needed
-    window.location.href = '/news';
+    window.location.href = '/blog';
   }
 }

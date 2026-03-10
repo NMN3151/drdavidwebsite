@@ -12,7 +12,7 @@ export class HomeHeroBannerComponent {
   constructor(private route:Router){}
 
   routetospeakingtopage(){
-    this.route.navigate(['/home/speaking-to'])
+    this.route.navigate(['/speaking-to'])
 
   }
 }

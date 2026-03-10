@@ -14,36 +14,36 @@
         <li class="nav-item dropdown" [class.open]="activeDropdown === 'speaking'" (mouseenter)="openDropdown('speaking')" (mouseleave)="closeDropdown()">
           <a class="nav-link" routerLink="/speaking">Speaking <span class="chevron">&#8964;</span></a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" routerLink="/home/speaking-to">Speaking</a>
+            <a class="dropdown-item" routerLink="/speaking-to">Speaking</a>
             <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf')">Speaker Kit</a>
             <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf')">Leadership Tree Template</a>
           </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/home/book">Book</a>
+          <a class="nav-link" routerLink="/book">Book</a>
         </li>
 
         <li class="nav-item dropdown" [class.open]="activeDropdown === 'media'" (mouseenter)="openDropdown('media')" (mouseleave)="closeDropdown()">
           <a class="nav-link" routerLink="/media">Media <span class="chevron">&#8964;</span></a>
           <div class="dropdown-menu">
-            <a class="dropdown-item" routerLink="/home/blog">In The News</a>
-            <a class="dropdown-item" routerLink="/home/pod-casts">Pod Casts</a>
-            <a class="dropdown-item" routerLink="/home/press-room">Press</a>
+            <a class="dropdown-item" routerLink="/blog">In The News</a>
+            <a class="dropdown-item" routerLink="/pod-casts">Pod Casts</a>
+            <a class="dropdown-item" routerLink="/press-room">Press</a>
           </div>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/home/about">About</a>
+          <a class="nav-link" routerLink="/about">About</a>
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" routerLink="/home/contact">Contact</a>
+          <a class="nav-link" routerLink="/contact">Contact</a>
         </li>
 
       </ul>
 
-      <a class="btn-cta" routerLink="/home/meeting-request">Book Dr. Schreiner</a>
+      <a class="btn-cta" routerLink="/meeting-request">Book Dr. Schreiner</a>
 
       <button class="hamburger" (click)="toggleMobileMenu()" [class.active]="mobileMenuOpen" aria-label="Toggle menu">
         <span></span>
@@ -62,14 +62,14 @@
           <span class="mobile-chevron" [class.rotated]="mobileDropdown === 'speaking'">&#8964;</span>
         </div>
         <div class="mobile-dropdown" [class.open]="mobileDropdown === 'speaking'">
-          <a class="mobile-dropdown-item" routerLink="/home/speaking-to" (click)="closeMobileMenu()">Speaking</a>
+          <a class="mobile-dropdown-item" routerLink="/speaking-to" (click)="closeMobileMenu()">Speaking</a>
           <a class="mobile-dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf'); closeMobileMenu()">Speaker Kit</a>
           <a class="mobile-dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf'); closeMobileMenu()">Leadership Tree Template</a>
         </div>
       </li>
 
       <li class="mobile-nav-item">
-        <a class="mobile-nav-link" routerLink="/home/book" (click)="closeMobileMenu()">Book</a>
+        <a class="mobile-nav-link" routerLink="/book" (click)="closeMobileMenu()">Book</a>
       </li>
 
       <li class="mobile-nav-item">
@@ -78,22 +78,22 @@
           <span class="mobile-chevron" [class.rotated]="mobileDropdown === 'media'">&#8964;</span>
         </div>
         <div class="mobile-dropdown" [class.open]="mobileDropdown === 'media'">
-          <a class="mobile-dropdown-item" routerLink="/home/blog" (click)="closeMobileMenu()">In The News</a>
-          <a class="mobile-dropdown-item" routerLink="/home/pod-casts" (click)="closeMobileMenu()">Pod Casts</a>
-          <a class="mobile-dropdown-item" routerLink="/home/press-room" (click)="closeMobileMenu()">Press</a>
+          <a class="mobile-dropdown-item" routerLink="/blog" (click)="closeMobileMenu()">In The News</a>
+          <a class="mobile-dropdown-item" routerLink="/pod-casts" (click)="closeMobileMenu()">Pod Casts</a>
+          <a class="mobile-dropdown-item" routerLink="/press-room" (click)="closeMobileMenu()">Press</a>
         </div>
       </li>
 
       <li class="mobile-nav-item">
-        <a class="mobile-nav-link" routerLink="/home/about" (click)="closeMobileMenu()">About</a>
+        <a class="mobile-nav-link" routerLink="/about" (click)="closeMobileMenu()">About</a>
       </li>
 
       <li class="mobile-nav-item">
-        <a class="mobile-nav-link" routerLink="/home/contact" (click)="closeMobileMenu()">Contact</a>
+        <a class="mobile-nav-link" routerLink="/contact" (click)="closeMobileMenu()">Contact</a>
       </li>
 
       <li class="mobile-nav-item mobile-cta">
-        <a class="btn-cta-mobile" routerLink="/home/meeting-request" (click)="closeMobileMenu()">Book Dr. Schreiner</a>
+        <a class="btn-cta-mobile" routerLink="/meeting-request" (click)="closeMobileMenu()">Book Dr. Schreiner</a>
       </li>
 
     </ul>

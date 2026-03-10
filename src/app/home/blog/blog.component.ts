@@ -206,6 +206,6 @@ export class BlogComponent implements OnInit {
   }
 
   navigateToArticle(article: BlogArticle): void {
-    this.router.navigate(['/home', article.slug]);
+    this.router.navigate(['', article.slug]);
   }
 }

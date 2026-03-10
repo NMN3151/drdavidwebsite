@@ -45,6 +45,6 @@ export class ContactComponent implements OnInit {
   }
 
   goToMeetingRequest(): void {
-    this.router.navigate(['/home/meeting-request']);
+    this.router.navigate(['/meeting-request']);
   }
 }
