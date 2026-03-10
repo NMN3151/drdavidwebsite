@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-dr-schreiner-text-banner',
@@ -7,13 +8,23 @@ import { Component } from '@angular/core';
 })
 export class DrSchreinerTextBannerComponent {
 
+  constructor(private router:Router){}
+  
   onBook(): void {
-    // Handle booking action
     console.log('Book Dr. Schreiner clicked');
   }
 
   onContact(): void {
-    // Handle contact action
     console.log('Contact Dr. Schreiner clicked');
+  }
+
+
+  bookdr(){
+     this.router.navigate(['/meeting-request'])
+  }
+
+
+  contactdr(){
+this.router.navigate(['/contact'])
   }
 }
