@@ -308,7 +308,9 @@
  
 @media (max-width: 600px) {
 
-
+.mobile-footer-row .footer-nav-link:last-child {
+    margin-left: 10px;
+  }
   .newsletter-desc {
   font-size: 14px;
   
@@ -389,6 +391,7 @@
   .footer-tagline {
     text-align: left;
     max-width: 100%;
+    font-size: 14px;
   }
 
   /* Nav two columns side by side, centered */
