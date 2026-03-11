@@ -7,13 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ForMeetingProfessinalsComponent {
 
-  downloadLinks = [
-    { label: 'Download Headshot',               href: '#' },
-    { label: 'Download Bio',                    href: '#' },
-    { label: 'Download Intro',                  href: '#' },
-    { label: 'Download One Sheet',              href: '#' },
-    { label: 'Download Speaker Kit',            href: '#' },
-    { label: 'Download AV Needs',               href: '#' },
-    { label: 'Download Leadership Tree Template', href: '#' },
-  ];
+  downloadFile(path: string, filename: string): void {
+    const anchor = document.createElement('a');
+    anchor.href = path;
+    anchor.download = filename;
+    anchor.target = '_blank';
+    document.body.appendChild(anchor);
+    anchor.click();
+    document.body.removeChild(anchor);
+  }
 }
