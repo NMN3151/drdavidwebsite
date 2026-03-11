@@ -33,8 +33,10 @@ export class HeaderComponent implements OnInit {
 
    bookdr(): void {
     this.closeMobileMenu();
-    this.router.navigate(['/speaking-to'], {
-      fragment: 'invite-section'
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/speaking-to'], {
+        fragment: 'meetingpro'
+      });
     });
   }
 

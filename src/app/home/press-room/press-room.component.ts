@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,9 +6,13 @@ import { Router } from '@angular/router';
   templateUrl: './press-room.component.html',
   styleUrls: ['./press-room.component.css']
 })
-export class PressRoomComponent {
+export class PressRoomComponent implements OnInit{
 
   constructor(private router: Router) {}
+  ngOnInit(): void {
+       window.scrollTo({ top: 0, behavior: 'smooth'});
+
+  }
 
   // Open a PDF in a new browser tab
   openPdf(path: string): void {

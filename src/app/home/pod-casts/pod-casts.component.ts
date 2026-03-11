@@ -1,11 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-pod-casts',
   templateUrl: './pod-casts.component.html',
   styleUrls: ['./pod-casts.component.css']
 })
-export class PodCastsComponent {
+export class PodCastsComponent implements OnInit{
+  ngOnInit(): void {
+        window.scrollTo({ top: 0, behavior: 'smooth'});
+
+  }
 
   activeModal: string = '';
 

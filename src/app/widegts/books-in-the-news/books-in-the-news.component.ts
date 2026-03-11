@@ -51,11 +51,7 @@ export class BooksInTheNewsComponent {
   }
 
   learnMoreSpeaking(): void {
-    window.open(
-      'https://drdavidschreiner.com/public-speaking/',
-      '_blank',
-      'noopener,noreferrer'
-    );
+    this.router.navigate(['/speaking-to'])
   }
 
   viewAllNews(): void {

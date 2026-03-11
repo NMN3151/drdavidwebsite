@@ -17,8 +17,9 @@
           </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="/speaking-to">Speaking</a>
-            <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf')">Speaker Kit</a>
-            <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf')">Leadership Tree Template</a>
+            <a class="dropdown-item" (click)="bookdr()">Meeting Professionals</a>
+            <!-- <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf')">Speaker Kit</a>
+            <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf')">Leadership Tree Template</a> -->
           </div>
         </li>
 
@@ -68,8 +69,7 @@
         </div>
         <div class="mobile-dropdown" [class.open]="mobileDropdown === 'speaking'">
           <a class="mobile-dropdown-item" routerLink="/speaking-to" (click)="closeMobileMenu()">Speaking</a>
-          <a class="mobile-dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf'); closeMobileMenu()">Speaker Kit</a>
-          <a class="mobile-dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf'); closeMobileMenu()">Leadership Tree Template</a>
+          <a class="mobile-dropdown-item" routerLink="/speaking-to" (click)="bookdr()">Meeting Professionals</a>
         </div>
       </li>
 

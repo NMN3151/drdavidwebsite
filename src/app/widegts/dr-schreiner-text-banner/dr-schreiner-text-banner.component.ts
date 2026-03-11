@@ -19,8 +19,12 @@ export class DrSchreinerTextBannerComponent {
   }
 
 
-  bookdr(){
-     this.router.navigate(['/meeting-request'])
+    bookdr(): void {
+    this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
+      this.router.navigate(['/speaking-to'], {
+        fragment: 'invite-section'
+      });
+    });
   }
 
 

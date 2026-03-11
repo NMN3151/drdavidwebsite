@@ -146,6 +146,7 @@
   border-radius: 7px;
   transition: color 0.15s ease, background-color 0.15s ease, padding-left 0.15s ease;
   letter-spacing: 0.2px;
+  cursor: pointer;
 }
 
 .dropdown-item:hover {

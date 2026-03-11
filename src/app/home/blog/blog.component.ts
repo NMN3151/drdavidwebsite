@@ -172,8 +172,12 @@ export class BlogComponent implements OnInit {
     private router: Router,
     private route: ActivatedRoute,
   ) {}
-
+ 
   ngOnInit(): void {
+
+    window.scrollTo({ top: 0, behavior: 'smooth'});
+
+
     this.route.queryParams.subscribe((params) => {
       const page = parseInt(params['page'], 10);
       this.currentPage =
