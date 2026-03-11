@@ -16,45 +16,8 @@
   flex-direction: column;
 }
 
-/* ========================================
-   Header
-   ======================================== */
-
-.about-header {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 28px;
-}
-
-.about-main-title {
-  font-family: var(--heading-font-family, 'Nanum Myeongjo', serif);
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--primary-dark, #0B0F1A);
-  margin: 0;
-  line-height: 1.2;
-}
-
-.about-subtitle {
-  font-family: var(--header-font-family, 'Inter', sans-serif);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--accent-red, #C62828);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-/* ========================================
-   Divider
-   ======================================== */
-
-.about-divider {
-  border: none;
-  border-top: 1px solid #D1D5DB;
-  margin: 0 0 48px;
-}
-
+ 
+ 
 /* ========================================
    Two Column Layout
    ======================================== */

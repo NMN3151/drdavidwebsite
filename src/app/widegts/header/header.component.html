@@ -12,7 +12,9 @@
       <ul class="nav-links">
 
         <li class="nav-item dropdown" [class.open]="activeDropdown === 'speaking'" (mouseenter)="openDropdown('speaking')" (mouseleave)="closeDropdown()">
-          <a class="nav-link" routerLink="/speaking">Speaking <span class="chevron">&#8964;</span></a>
+          <a class="nav-link" href="javascript:void(0)" (click)="$event.preventDefault()">
+            Speaking <span class="chevron">&#8964;</span>
+          </a>
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="/speaking-to">Speaking</a>
             <a class="dropdown-item" href="javascript:void(0)" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf')">Speaker Kit</a>
@@ -25,10 +27,13 @@
         </li>
 
         <li class="nav-item dropdown" [class.open]="activeDropdown === 'media'" (mouseenter)="openDropdown('media')" (mouseleave)="closeDropdown()">
-          <a class="nav-link" routerLink="/media">Media <span class="chevron">&#8964;</span></a>
+         <a class="nav-link" href="javascript:void(0)" (click)="$event.preventDefault()">
+  Media <span class="chevron">&#8964;</span>
+</a>
+         
           <div class="dropdown-menu">
             <a class="dropdown-item" routerLink="/blog">In The News</a>
-            <a class="dropdown-item" routerLink="/pod-casts">Pod Casts</a>
+            <a class="dropdown-item" routerLink="/pod-casts">Podcast</a>
             <a class="dropdown-item" routerLink="/press-room">Press</a>
           </div>
         </li>
@@ -43,7 +48,7 @@
 
       </ul>
 
-      <a class="btn-cta" routerLink="/meeting-request">Book Dr. Schreiner</a>
+      <a class="btn-cta" (click)="bookdr()">Book Dr. Schreiner</a>
 
       <button class="hamburger" (click)="toggleMobileMenu()" [class.active]="mobileMenuOpen" aria-label="Toggle menu">
         <span></span>
@@ -93,7 +98,7 @@
       </li>
 
       <li class="mobile-nav-item mobile-cta">
-        <a class="btn-cta-mobile" routerLink="/meeting-request" (click)="closeMobileMenu()">Book Dr. Schreiner</a>
+        <a class="btn-cta-mobile"   (click)="bookdr()">Book Dr. Schreiner</a>
       </li>
 
     </ul>

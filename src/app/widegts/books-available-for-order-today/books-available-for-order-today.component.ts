@@ -9,7 +9,7 @@ export class BooksAvailableForOrderTodayComponent {
 
   orderOnAmazon(): void {
     window.open(
-      'https://www.amazon.com/Best-Part-Their-Supercharging',
+      'https://www.amazon.com/Best-Part-Their-Supercharging-Communication/dp/1642257605',
       '_blank',
       'noopener,noreferrer'
     );

@@ -10,7 +10,6 @@ import { PodCastsComponent } from './home/pod-casts/pod-casts.component';
 import { PressRoomComponent } from './home/press-room/press-room.component';
 import { AboutComponent } from './home/about/about.component';
 import { ContactComponent } from './home/contact/contact.component';
-import { MeetingRequestComponent } from './home/meeting-request/meeting-request.component';
 
 const routes: Routes = [
  
@@ -52,11 +51,7 @@ const routes: Routes = [
         component: ContactComponent,
       },
 
-       {
-        path: 'meeting-request',
-        component: MeetingRequestComponent,
-      },
-
+       
 
 
 

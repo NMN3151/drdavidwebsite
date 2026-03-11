@@ -1,4 +1,5 @@
 import { Component, HostListener, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +8,8 @@ import { Component, HostListener, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+
+  constructor(private router:Router){}
   isScrolled = false;
   mobileMenuOpen = false;
   activeDropdown: string | null = null;
@@ -26,6 +29,16 @@ export class HeaderComponent implements OnInit {
   closeDropdown(): void {
     this.activeDropdown = null;
   }
+
+
+   bookdr(): void {
+    this.closeMobileMenu();
+    this.router.navigate(['/speaking-to'], {
+      fragment: 'invite-section'
+    });
+  }
+
+
 
   toggleMobileMenu(): void {
     this.mobileMenuOpen = !this.mobileMenuOpen;

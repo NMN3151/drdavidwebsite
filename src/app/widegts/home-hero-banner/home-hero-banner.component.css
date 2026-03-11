@@ -108,7 +108,7 @@
 
 .hero-author-name {
   font-family: var(--heading-font-family);
-  font-size: 15px;
+  font-size: 20px;
   font-weight: 500;
   color: var(--pure-white);
   letter-spacing: 0.2px;
@@ -116,7 +116,7 @@
 
 .hero-author-title {
   font-family: var(--heading-font-family);
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 400;
   color: var(--light-grey);
   letter-spacing: 0.1px;
@@ -142,7 +142,7 @@
   padding: 11px 24px;
   color: var(--primary-dark);
   font-family: var(--heading-font-family);
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
   border-radius: 10px;
@@ -168,7 +168,7 @@
   padding: 14px 24px;
   color: white;
   font-family: var(--heading-font-family);
-  font-size: 13.5px;
+  font-size: 15px;
   font-weight: 600;
   text-decoration: none;
   border-radius: 10px;

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { ActivatedRoute } from '@angular/router';
 
 interface Country {
   name: string;
@@ -41,7 +42,11 @@ export class InviteDrschreinerToSpeakComponent implements OnInit {
     { name: 'Spain', code: 'ES', dial_code: '+34', flag: '🇪🇸' },
   ];
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder,
+    private activatedRoute: ActivatedRoute
+
+
+  ) {}
 
   ngOnInit(): void {
     this.inviteForm = this.fb.group({
@@ -57,6 +62,21 @@ export class InviteDrschreinerToSpeakComponent implements OnInit {
       hearAbout:          ['', [Validators.required]],
       additionalInfo:     ['', [Validators.required]],
     });
+
+
+    this.activatedRoute.fragment.subscribe(fragment => {
+      if (fragment) {
+        setTimeout(() => {
+          const el = document.getElementById(fragment);
+          if (el) {
+            el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      }
+    });
+
+
+
   }
 
   onSubmit(): void {

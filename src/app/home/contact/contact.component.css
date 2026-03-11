@@ -15,46 +15,7 @@
   display: flex;
   flex-direction: column;
 }
-
-/* ========================================
-   Header
-   ======================================== */
-
-.contact-header {
-  display: flex;
-  flex-direction: column;
-  gap: 4px;
-  margin-bottom: 28px;
-}
-
-.contact-main-title {
-  font-family: var(--heading-font-family, 'Nanum Myeongjo', serif);
-  font-size: 32px;
-  font-weight: 700;
-  color: var(--primary-dark, #0B0F1A);
-  margin: 0;
-  line-height: 1.2;
-}
-
-.contact-subtitle {
-  font-family: var(--header-font-family, 'Inter', sans-serif);
-  font-size: 12px;
-  font-weight: 700;
-  color: var(--accent-red, #C62828);
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-/* ========================================
-   Divider
-   ======================================== */
-
-.contact-divider {
-  border: none;
-  border-top: 1px solid #D1D5DB;
-  margin: 0 0 40px;
-}
-
+ 
 /* ========================================
    Two Column Layout
    ======================================== */

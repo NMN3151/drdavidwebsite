@@ -47,7 +47,6 @@ import { NotAllSuperheroesWearCapesComponent } from './blog-widgets/not-all-supe
 import { RuralHospitalsStruggleUnderPrivateEquityOwnershipComponent } from './blog-widgets/rural-hospitals-struggle-under-private-equity-ownership/rural-hospitals-struggle-under-private-equity-ownership.component';
 import { PressRoomComponent } from './home/press-room/press-room.component';
 import { ContactComponent } from './home/contact/contact.component';
-import { MeetingRequestComponent } from './home/meeting-request/meeting-request.component';
 import { PodCastsComponent } from './home/pod-casts/pod-casts.component';
 import { AboutComponent } from './home/about/about.component';
 import { StarRatingComponent } from './widegts/star-rating/star-rating.component';
@@ -98,7 +97,6 @@ import { StarRatingComponent } from './widegts/star-rating/star-rating.component
     BlogComponent,
     PressRoomComponent,
     ContactComponent,
-    MeetingRequestComponent,
    PodCastsComponent,
    AboutComponent,
    StarRatingComponent

@@ -193,6 +193,7 @@
   border-color: var(--accent-gold);
   transform: translateY(-1px);
   color:var(--accent-red);
+  cursor: pointer;
 }
 
 /* ========================================

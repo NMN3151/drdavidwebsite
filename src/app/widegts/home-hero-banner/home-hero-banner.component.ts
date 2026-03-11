@@ -9,10 +9,18 @@ import { Router } from '@angular/router';
 export class HomeHeroBannerComponent {
 
 
-  constructor(private route:Router){}
+  constructor(private route:Router,private router:Router){}
 
   routetospeakingtopage(){
     this.route.navigate(['/speaking-to'])
 
   }
+
+  bookdr(): void {
+    this.router.navigate(['/speaking-to'], {
+      fragment: 'invite-section'
+    });
+  }
+
+
 }

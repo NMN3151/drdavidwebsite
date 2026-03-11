@@ -164,33 +164,96 @@
 
 .better-quote {
   margin: 0;
-  padding: 28px 32px;
+  padding: 36px 40px;
+  background: #ffffff;
   border: 1.5px solid #E5E7EB;
-  border-radius: 6px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 20px;
   position: relative;
+  box-shadow:
+    0 4px 6px -1px rgba(0, 0, 0, 0.07),
+    0 10px 30px -5px rgba(0, 0, 0, 0.08),
+    0 0 0 1px rgba(0, 0, 0, 0.03);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.better-quote:hover {
+  box-shadow:
+    0 8px 16px -2px rgba(0, 0, 0, 0.10),
+    0 20px 48px -8px rgba(0, 0, 0, 0.12),
+    0 0 0 1px rgba(0, 0, 0, 0.04);
+}
+
+/* Large decorative quote mark */
+.better-quote::before {
+  content: '\201C';
+  font-family: var(--inria-serif-font-family);
+  font-size: 96px;
+  line-height: 1;
+  color: var(--accent-red);
+  position: absolute;
+  opacity: 0.5;
+  top: 0px;
+  left: 28px;
+  pointer-events: none;
 }
 
 .better-quote-text {
   font-family: var(--inria-serif-font-family);
   font-size: 20px;
   font-weight: 400;
-  color: var(--dark-grey);
-  line-height: 1.8;
+  color: #374151;
+  line-height: 1.85;
   margin: 0;
-  font-style: normal;
+  padding-left: 16px;
+  position: relative;
+  z-index: 1;
 }
 
 .better-quote-author {
-  font-family: var(--font-primary);
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding-left: 16px;
+  padding-top: 12px;
+  border-top: 1px solid #F3F4F6;
+}
+
+.author-avatar {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #E5E7EB;
+}
+
+.author-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.author-name {
+  font-family: var(--inria-serif-font-family);
   font-size: 20px;
   font-weight: 700;
   color: var(--primary-dark);
-  letter-spacing: 0.4px;
-  margin: 0;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  line-height: 1.4;
 }
+
+.author-title {
+  font-family: var(--inria-serif-font-family);
+  font-size: 20px;
+  font-weight: 400;
+  color: #6B7280;
+  line-height: 1.4;
+}
+
 .better-image-wrapper-mobile {
   width: 100%;
   border-radius: 6px;
@@ -263,15 +326,51 @@
     font-size: 14px;
   }
 
-  .better-quote {
-    padding: 22px 20px;
+   .better-quote {
+    padding: 24px 18px;
+    gap: 16px;
+  }
+
+  .better-quote::before {
+    font-size: 64px;
+    left: 16px;
+    top: -4px;
   }
 
   .better-quote-text {
-    font-size: 13.5px;
+    font-size: 14px;
+    line-height: 1.75;
+    padding-left: 0;
   }
 
   .better-quote-author {
-    font-size: 12px;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+    padding-top: 14px;
+    gap: 10px;
+  }
+
+  .author-avatar {
+    width: 64px;
+    height: 64px;
+    border-width: 2px;
+  }
+
+  .author-info {
+    align-items: center;
+    gap: 4px;
+  }
+
+  .author-name {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .author-title {
+    font-size: 14px;
+    line-height: 1.5;
+    color: #6B7280;
   }
 }

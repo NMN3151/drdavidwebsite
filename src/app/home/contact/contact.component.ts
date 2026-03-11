@@ -37,14 +37,12 @@ export class ContactComponent implements OnInit {
   onSubmit(): void {
     this.submitted = true;
     if (this.contactForm.valid) {
-      console.log('Form submitted:', this.contactForm.value);
-      // Add your submit logic here (e.g. API call)
       this.contactForm.reset();
       this.submitted = false;
     }
   }
 
-  goToMeetingRequest(): void {
-    this.router.navigate(['/meeting-request']);
-  }
+ goToMeetingRequest(): void {
+  window.open('https://calendly.com/your-calendly-username', '_blank');
+}
 }
