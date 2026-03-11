@@ -1,43 +1,86 @@
 <section class="meeting-section" id="meetingpro">
   <div class="meeting-container">
-
     <!-- Left: Heading + Links -->
     <div class="meeting-left">
       <h2 class="meeting-heading">For Meeting Professionals</h2>
 
       <ul class="meeting-links">
         <li>
-          <a href="#" class="meeting-link" target="_blank" rel="noopener noreferrer">
+          <a
+            href="javascript:void(0)"
+            class="meeting-link"
+            (click)="
+              downloadFile(
+                'assets/images/pressroom/pressroom1.jpg',
+                'Headshot.jpg'
+              )
+            "
+          >
             Download Headshot
           </a>
         </li>
         <li>
-          <a href="#" class="meeting-link" target="_blank" rel="noopener noreferrer">
+          <a
+            href="#"
+            class="meeting-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Download Bio
           </a>
         </li>
         <li>
-          <a href="#" class="meeting-link" target="_blank" rel="noopener noreferrer">
+          <a
+            href="#"
+            class="meeting-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Download Intro
           </a>
         </li>
         <li>
-          <a href="#" class="meeting-link" target="_blank" rel="noopener noreferrer">
+          <a
+            href="#"
+            class="meeting-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Download One Sheet
           </a>
         </li>
         <li>
-          <a href="javascript:void(0)" class="meeting-link" (click)="downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf')">
+          <a
+            href="javascript:void(0)"
+            class="meeting-link"
+            (click)="
+              downloadFile('assets/pdfs/Speaker Kit.pdf', 'Speaker Kit.pdf')
+            "
+          >
             Download Speaker Kit
           </a>
         </li>
         <li>
-          <a href="#" class="meeting-link" target="_blank" rel="noopener noreferrer">
+          <a
+            href="#"
+            class="meeting-link"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Download AV Needs
           </a>
         </li>
         <li>
-          <a href="javascript:void(0)" class="meeting-link" (click)="downloadFile('assets/pdfs/Leadership Tree Template.pdf', 'Leadership Tree Template.pdf')">
+          <a
+            href="javascript:void(0)"
+            class="meeting-link"
+            (click)="
+              downloadFile(
+                'assets/pdfs/Leadership Tree Template.pdf',
+                'Leadership Tree Template.pdf'
+              )
+            "
+          >
             Download Leadership Tree Template
           </a>
         </li>
@@ -52,6 +95,5 @@
         class="meeting-image"
       />
     </div>
-
   </div>
 </section>

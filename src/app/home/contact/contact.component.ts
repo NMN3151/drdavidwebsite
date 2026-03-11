@@ -43,6 +43,6 @@ export class ContactComponent implements OnInit {
   }
 
  goToMeetingRequest(): void {
-  window.open('https://calendly.com/your-calendly-username', '_blank');
+  window.open('https://calendly.com/drdavidschreiner/30-minute-zoom-call', '_blank');
 }
 }
