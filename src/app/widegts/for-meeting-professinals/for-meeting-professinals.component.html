@@ -21,20 +21,22 @@
         </li>
         <li>
           <a
-            href="#"
+            href="javascript:void(0)"
             class="meeting-link"
-            target="_blank"
-            rel="noopener noreferrer"
+            (click)="
+              downloadFile('assets/pdfs/David_Schreiner_Bio March 2025.docx.pdf', 'David_Schreiner_Bio March 2025.docx.pdf')
+            "
           >
             Download Bio
           </a>
         </li>
         <li>
           <a
-            href="#"
+            href="javascript:void(0)"
             class="meeting-link"
-            target="_blank"
-            rel="noopener noreferrer"
+            (click)="
+              downloadFile('assets/pdfs/Dr David Schreiner Speaker Intro.docx.pdf', 'Dr David Schreiner Speaker Intro.docx.pdf')
+            "
           >
             Download Intro
           </a>
