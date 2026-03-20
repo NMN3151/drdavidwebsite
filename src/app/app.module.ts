@@ -50,6 +50,7 @@ import { ContactComponent } from './home/contact/contact.component';
 import { PodCastsComponent } from './home/pod-casts/pod-casts.component';
 import { AboutComponent } from './home/about/about.component';
 import { StarRatingComponent } from './widegts/star-rating/star-rating.component';
+import { PopUpBecomeTheBestComponent } from './widegts/pop-up-become-the-best/pop-up-become-the-best.component';
 
 @NgModule({
   declarations: [
@@ -99,9 +100,10 @@ import { StarRatingComponent } from './widegts/star-rating/star-rating.component
     ContactComponent,
    PodCastsComponent,
    AboutComponent,
-   StarRatingComponent
+   StarRatingComponent,
+   PopUpBecomeTheBestComponent
 
-    
+
   ],
   imports: [
     BrowserModule,

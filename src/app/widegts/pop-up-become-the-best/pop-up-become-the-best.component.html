@@ -1,0 +1,29 @@
+<!-- Overlay -->
+<div class="popup-overlay" *ngIf="isVisible" (click)="closePopup()">
+
+  <!-- Modal Card -->
+  <div class="popup-card" (click)="$event.stopPropagation()">
+
+    <!-- Close Button -->
+    <button class="popup-close" (click)="closePopup()" aria-label="Close">&#x2715;</button>
+
+    <!-- Left: Text Content -->
+    <div class="popup-content">
+      <h2 class="popup-heading">'Become the best part of someone's day.'</h2>
+      <p class="popup-description">
+        Get 5 quick leadership videos&mdash;plus a simple monthly newsletter with practical ideas you can use right away.
+      </p>
+      <button class="popup-cta" (click)="navigateToSpeaking()">View Free Videos</button>
+    </div>
+
+    <!-- Right: Image -->
+    <div class="popup-image-wrapper">
+      <img
+        src="../../../assets/images/popupimage.png"
+        alt="Dr. David Speaking"
+        class="popup-image"
+      />
+    </div>
+
+  </div>
+</div>
