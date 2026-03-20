@@ -12,7 +12,9 @@ export class HomeHeroBannerComponent {
   constructor(private route:Router,private router:Router){}
 
   routetospeakingtopage(){
-    this.route.navigate(['/speaking-to'])
+   this.router.navigate(['/speaking-to'], {
+      fragment: 'video-section'
+    });
 
   }
 

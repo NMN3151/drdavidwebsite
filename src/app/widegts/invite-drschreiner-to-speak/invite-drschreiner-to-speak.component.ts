@@ -80,20 +80,54 @@ export class InviteDrschreinerToSpeakComponent implements OnInit {
   }
 
   onSubmit(): void {
-    if (this.inviteForm.invalid) return;
 
-    this.isLoading = true;
+  if (this.inviteForm.invalid) return;
 
-    const formData = {
-      ...this.inviteForm.value,
-      fullPhone: `${this.inviteForm.value.countryCode} ${this.inviteForm.value.phone}`
-    };
+  this.isLoading = true;
 
-    // Simulate async submission
-    setTimeout(() => {
-      console.log('Invite Dr. Schreiner Form Submitted:', formData);
-      this.isLoading = false;
+  const formData = {
+  access_key: "c4ede7c2-9615-4a2b-8a42-db0f89471f69",
+
+  subject: "New Dr Schreiner Speaking Invitation",
+  from_name: "Dr Schreiner Website",
+
+  "Name": this.inviteForm.value.name,
+  "Email": this.inviteForm.value.email,
+  "Phone": `${this.inviteForm.value.countryCode} ${this.inviteForm.value.phone}`,
+  "Organization": this.inviteForm.value.organization,
+  "Event Name": this.inviteForm.value.eventName,
+  "Event Location": this.inviteForm.value.eventLocation,
+  "Event Date": this.inviteForm.value.eventDate,
+  "Expected Attendance": this.inviteForm.value.expectedAttendance,
+  "How Did You Hear About Dr. Schreiner?": this.inviteForm.value.hearAbout,
+  "Additional Information": this.inviteForm.value.additionalInfo
+};
+
+  fetch("https://api.web3forms.com/submit", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+      "Accept": "application/json"
+    },
+    body: JSON.stringify(formData)
+  })
+  .then(async (response) => {
+    const result = await response.json();
+
+    if (result.success) {
+      alert("Form submitted successfully!");
       this.inviteForm.reset({ countryCode: '+1' });
-    }, 1500);
-  }
+    } else {
+      alert("Something went wrong.");
+      console.log(result);
+    }
+
+    this.isLoading = false;
+  })
+  .catch(error => {
+    console.log(error);
+    this.isLoading = false;
+  });
+
+}
 }

@@ -29,7 +29,7 @@
 
         <li class="nav-item dropdown" [class.open]="activeDropdown === 'media'" (mouseenter)="openDropdown('media')" (mouseleave)="closeDropdown()">
          <a class="nav-link" href="javascript:void(0)" (click)="$event.preventDefault()">
-  Media <span class="chevron">&#8964;</span>
+  Resources <span class="chevron">&#8964;</span>
 </a>
          
           <div class="dropdown-menu">
@@ -79,7 +79,7 @@
 
       <li class="mobile-nav-item">
         <div class="mobile-nav-header" (click)="toggleMobileDropdown('media')">
-          <span class="mobile-nav-link">Media</span>
+          <span class="mobile-nav-link">Resources</span>
           <span class="mobile-chevron" [class.rotated]="mobileDropdown === 'media'">&#8964;</span>
         </div>
         <div class="mobile-dropdown" [class.open]="mobileDropdown === 'media'">

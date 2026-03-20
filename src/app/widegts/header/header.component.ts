@@ -35,7 +35,7 @@ export class HeaderComponent implements OnInit {
     this.closeMobileMenu();
     this.router.navigateByUrl('/', { skipLocationChange: true }).then(() => {
       this.router.navigate(['/speaking-to'], {
-        fragment: 'meetingpro'
+        fragment: 'invite-section'
       });
     });
   }

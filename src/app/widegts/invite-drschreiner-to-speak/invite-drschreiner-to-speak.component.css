@@ -111,6 +111,13 @@
   letter-spacing: 0.01em;
 }
 
+.required-star {
+  color: #C62828;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+}
+
 .form-input {
   width: 100%;
   height: 42px;
