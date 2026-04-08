@@ -52,15 +52,15 @@ export class InviteDrschreinerToSpeakComponent implements OnInit {
     this.inviteForm = this.fb.group({
       name:               ['', [Validators.required]],
       email:              ['', [Validators.required, Validators.email]],
-      countryCode:        ['+1', [Validators.required]],
-      phone:              ['', [Validators.required]],
-      organization:       ['', [Validators.required]],
-      eventName:          ['', [Validators.required]],
-      eventLocation:      ['', [Validators.required]],
-      eventDate:          ['', [Validators.required]],
-      expectedAttendance: ['', [Validators.required]],
-      hearAbout:          ['', [Validators.required]],
-      additionalInfo:     ['', [Validators.required]],
+      countryCode:        ['+1'],
+      phone:              [''],
+      organization:       [''],
+      eventName:          [''],
+      eventLocation:      [''],
+      eventDate:          [''],
+      expectedAttendance: [''],
+      hearAbout:          [''],
+      additionalInfo:     [''],
     });
 
 

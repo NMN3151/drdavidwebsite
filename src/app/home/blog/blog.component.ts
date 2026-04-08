@@ -39,7 +39,7 @@ export class BlogComponent implements OnInit {
     {
       title: 'Principles And Practices To Supercharge',
       excerpt:
-        'Communications In Your Work Culture By David L. Schreiner, Ph.D., FACHE The room grew quiet. All of the executive team members had shared their thoughts on the topic. The only person not to speak was the CEO. “He always encourages us to speak first, and...',
+        'Communications In Your Work Culture By David L. Schreiner., FACHE The room grew quiet. All of the executive team members had shared their thoughts on the topic. The only person not to speak was the CEO. “He always encourages us to speak first, and...',
       image:
         '../../../assets/images/blogimages/Principles And Practices To Supercharge.jpg',
       slug: 'principles-and-practices-to-supercharge',
@@ -58,7 +58,7 @@ export class BlogComponent implements OnInit {
     {
       title: 'Rural Hospitals Struggle Under Private Equity Ownership',
       excerpt:
-        'Original article on Electronic Health Reporter By David L. Schreiner, Ph.D., FACHE Private equity ownership of rural hospitals is growing, but so are concerns about the effects private equity firms can have on quality of care in small, community hospitals. A new study reveals that care is riskier...',
+        'Original article on Electronic Health Reporter By David L. Schreiner., FACHE Private equity ownership of rural hospitals is growing, but so are concerns about the effects private equity firms can have on quality of care in small, community hospitals. A new study reveals that care is riskier...',
       image:
         '../../../assets/images/blogimages/Rural Hospitals Struggle Under Private Equity Ownership.jpg',
       slug: 'rural-hospitals-struggle-under-private-equity-ownership',
