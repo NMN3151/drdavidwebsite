@@ -20,7 +20,6 @@
         placeholder="First name"
         name="firstName"
         [(ngModel)]="firstName"
-        required
       />
       <input
         type="email"
@@ -30,7 +29,7 @@
         [(ngModel)]="email"
         required
       />
-      <button type="submit" class="newsletter-btn">Subscribe Now</button>
+      <button type="submit" class="newsletter-btn" [disabled]="newsletterForm.invalid">Subscribe Now</button>
     </form>
   </div>
 </div>

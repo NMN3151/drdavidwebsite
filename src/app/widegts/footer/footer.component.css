@@ -96,8 +96,15 @@
   flex-shrink: 0;
 }
 
-.newsletter-btn:hover {
+.newsletter-btn:hover:not(:disabled) {
   background-color: #A61B1B;
+}
+
+.newsletter-btn:disabled {
+  background-color: #cccccc;
+  color: #888888;
+  cursor: not-allowed;
+  border-radius: 10px;
 }
 
 /* ========================================
